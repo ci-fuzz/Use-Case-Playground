@@ -17,7 +17,7 @@ Structure:
   - Custom Sanitizer/Custom Vulnerabilities
   - Unit Test Runner?
 - Java
-  - API FuzzinggRPC
+  - API Fuzzing
     - Plain
     - Chain
   - Web API Fuzzing
