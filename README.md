@@ -27,6 +27,3 @@ Structure:
     - Web
     - gRPC
   - Custom Sanitizer/Custom Vulnerabilities
-- Go
-  - gRPC
-    
