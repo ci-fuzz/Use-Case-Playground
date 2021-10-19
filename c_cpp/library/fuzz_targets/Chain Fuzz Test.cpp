@@ -31,8 +31,11 @@ extern "C" int FUZZ(const uint8_t *Data, size_t Size) {
     FuzzedDataProvider fuzz_data_provider(Data, Size);
     FuzzedDataProvider *fuzz_data = &fuzz_data_provider;
 
+    //Make sure that the target software is always reset into the same state with every new input that is tested
     crypto::init();
 
+
+    //With every input tested we will execute 1-100 functions. The fuzzing input determines how many functions and which functions are called with which parameters. 
     int number_of_functions = fuzz_data->ConsumeIntegralInRange<int>(1,100);
     for (int i=0; i<number_of_functions; i++) {
       int func_id = fuzz_data->ConsumeIntegralInRange<int>(0, 15);

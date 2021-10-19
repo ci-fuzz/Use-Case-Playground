@@ -1,8 +1,6 @@
 #include <stdint.h>
 #include <stddef.h>
-
 #include <fuzzer/FuzzedDataProvider.h>
-
 
 extern "C" {
     #include "GPS_module_1.h"
@@ -11,11 +9,13 @@ extern "C" {
     #include "key_management_module_1.h"
 }
 
+//Helper functions
 void mocklib_set_data(void *fuzzed_data_provider);
 void ConsumeDataAndFillRestWithZeros(void *destination, size_t num_bytes, FuzzedDataProvider *fuzz_data);
 
 extern "C" int FUZZ(const uint8_t *Data, size_t Size) {
     
+    //Make sure that the target software is always reset into the same state with every new input that is tested
     crypto_init();
     
     // Ensure a minimum data length
@@ -26,6 +26,7 @@ extern "C" int FUZZ(const uint8_t *Data, size_t Size) {
     FuzzedDataProvider *fuzz_data = &fuzz_data_provider;
     mocklib_set_data(fuzz_data);
 
+    //With every input tested we will execute 1-100 functions. The fuzzing input determines how many functions and which functions are called with which parameters. 
     int number_of_functions = fuzz_data->ConsumeIntegralInRange<int>(1,100);
     for (int i=0; i<number_of_functions; i++) {
       int func_id = fuzz_data->ConsumeIntegralInRange<int>(0, 13);
