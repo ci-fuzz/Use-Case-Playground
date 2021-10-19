@@ -1,0 +1,3 @@
+add_subdirectory(library)
+add_subdirectory(tcp_server)
+add_subdirectory(udp_server)
