@@ -1,5 +1,5 @@
 ## Configuration for a CI Fuzz project
-## Generated on 2021-10-19 with CI Fuzz 2.25.0
+## Generated on 2021-10-19 with CI Fuzz 2.24.0
 ##
 ## Lines that start with "##" are explanations for the following
 ## setting, lines that start with "#" are settings that can be enabled
@@ -14,11 +14,11 @@
 ## directories (/lib, /bin/, /usr, ...) from the host system are
 ## automatically mounted into the container, effectively creating a
 ## build environment from the host.
-build_container: "candjavabuildimage"
+build_container: ""
 
 ## The name of the container image used for running the fuzz tests. If
 ## unspecified, the image of the build container is used.
-run_container: "candjavabuildimage"
+run_container: ""
 
 ## A list of paths which should be mounted from the host into the
 ## build and run containers. The format is SOURCE-DIR:DEST-DIR, where
@@ -36,8 +36,11 @@ run_container: "candjavabuildimage"
 build_script: ".code-intelligence/build.sh"
 
 ## Paths to the fuzz targets to execute.
-#fuzz_tests:
-#  - .code-intelligence/fuzz_targets/*
+fuzz_tests:
+  - "c_cpp/library/fuzz_targets/API Fuzz Test.cpp"
+  - "c_cpp/library/fuzz_targets/Chain Fuzz Test.cpp"
+  - "c_cpp/embedded_library/fuzz_targets/API Fuzz Test With Mocks.cpp"
+  - "java/api_fuzzing/JavaAPIFuzzer.java"
 
 ## Paths to web app fuzz target configs.
 web_app_target_configs:
@@ -49,17 +52,13 @@ web_app_target_configs:
 ## Address Sanitizer (and Undefined Behavior Sanitizer) is used.
 sanitizers:
   - address
-  - address
-  - address
-  - address
 
 ## The fuzzing engines to use for the fuzz tests. By default, only
 ## libfuzzer is used. Only valid for C/C++ targets.
-engines:
-  - libfuzzer
-  - libfuzzer
-  - libfuzzer
-  - libfuzzer
+#engines:
+#  - libfuzzer
+#  - afl
+#  - afl_llvm_mode
 
 ## The run time after which the fuzz tests are cancelled and
 ## considered as having passed. The default is 30 minutes.
