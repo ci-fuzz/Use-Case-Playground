@@ -39,6 +39,7 @@ build_script: ".code-intelligence/build.sh"
 fuzz_tests:
   - "c_cpp/library/fuzz_targets/API Fuzz Test.cpp"
   - "c_cpp/library/fuzz_targets/Chain Fuzz Test.cpp"
+  - "c_cpp/embedded_library/fuzz_targets/API Fuzz Test With Mocks.cpp"
 
 ## Paths to web app fuzz target configs.
 #web_app_target_configs:
