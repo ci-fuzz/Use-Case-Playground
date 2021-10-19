@@ -1,0 +1,2641 @@
+{
+  "name": "webgoat",
+  "javaCommand": "webgoat.jar --webgoat.build.version=8.2.1 --server.address=0.0.0.0",
+  "webControllerDb": {
+    "webControllerInfos": [
+      {
+        "method": "GET",
+        "uri": "/users",
+        "controllerClass": "org.owasp.webgoat.missing_ac.MissingFunctionACUsers",
+        "handlerFunctionName": "usersService",
+        "handlerFunctionSignature": "public java.util.List\u003corg.owasp.webgoat.missing_ac.DisplayUser\u003e org.owasp.webgoat.missing_ac.MissingFunctionACUsers.usersService(javax.servlet.http.HttpServletRequest)",
+        "id": "1879940232"
+      },
+      {
+        "method": "GET",
+        "uri": "/",
+        "controllerClass": "org.owasp.webgoat.missing_ac.MissingFunctionACUsers",
+        "handlerFunctionName": "usersService",
+        "handlerFunctionSignature": "public java.util.List\u003corg.owasp.webgoat.missing_ac.DisplayUser\u003e org.owasp.webgoat.missing_ac.MissingFunctionACUsers.usersService(javax.servlet.http.HttpServletRequest)",
+        "id": "1485967004"
+      },
+      {
+        "method": "GET",
+        "uri": "/crypto/encoding/basic",
+        "controllerClass": "org.owasp.webgoat.crypto.EncodingAssignment",
+        "handlerFunctionName": "getBasicAuth",
+        "handlerFunctionSignature": "public java.lang.String org.owasp.webgoat.crypto.EncodingAssignment.getBasicAuth(javax.servlet.http.HttpServletRequest)",
+        "id": "1385000945"
+      },
+      {
+        "method": "POST",
+        "uri": "/challenge/7",
+        "requestParameter": [
+          {
+            "name": "email",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.challenges.challenge7.Assignment7",
+        "handlerFunctionName": "sendPasswordResetLink",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.challenges.challenge7.Assignment7.sendPasswordResetLink(java.lang.String,javax.servlet.http.HttpServletRequest) throws java.net.URISyntaxException",
+        "id": "-1189047637"
+      },
+      {
+        "method": "GET",
+        "uri": "/challenge/7/reset-password/{link}",
+        "requestParameter": [
+          {
+            "name": "link",
+            "required": true,
+            "className": "class java.lang.String",
+            "type": "PATH_PARAM"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.challenges.challenge7.Assignment7",
+        "handlerFunctionName": "resetPassword",
+        "handlerFunctionSignature": "public org.springframework.http.ResponseEntity\u003cjava.lang.String\u003e org.owasp.webgoat.challenges.challenge7.Assignment7.resetPassword(java.lang.String)",
+        "id": "185585117"
+      },
+      {
+        "method": "POST",
+        "uri": "/HttpBasics/attack1",
+        "requestParameter": [
+          {
+            "name": "person",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.http_basics.HttpBasicsLesson",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.http_basics.HttpBasicsLesson.completed(java.lang.String)",
+        "id": "1566269898"
+      },
+      {
+        "method": "GET",
+        "uri": "/registration",
+        "controllerClass": "org.owasp.webgoat.users.RegistrationController",
+        "handlerFunctionName": "showForm",
+        "handlerFunctionSignature": "public java.lang.String org.owasp.webgoat.users.RegistrationController.showForm(org.owasp.webgoat.users.UserForm)",
+        "id": "-1855904696"
+      },
+      {
+        "method": "POST",
+        "uri": "/WebWolf/mail/send",
+        "requestParameter": [
+          {
+            "name": "email",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.webwolf_introduction.MailAssignment",
+        "handlerFunctionName": "sendEmail",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.webwolf_introduction.MailAssignment.sendEmail(java.lang.String)",
+        "id": "1363444525"
+      },
+      {
+        "method": "GET",
+        "uri": "/challenge/8/votes/average",
+        "controllerClass": "org.owasp.webgoat.challenges.challenge8.Assignment8",
+        "handlerFunctionName": "average",
+        "handlerFunctionSignature": "public org.springframework.http.ResponseEntity\u003cjava.util.Map\u003cjava.lang.String, java.lang.Integer\u003e\u003e org.owasp.webgoat.challenges.challenge8.Assignment8.average()",
+        "id": "24086897"
+      },
+      {
+        "method": "POST",
+        "uri": "/HtmlTampering/task",
+        "requestParameter": [
+          {
+            "name": "QTY",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "Total",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.html_tampering.HtmlTamperingTask",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.html_tampering.HtmlTamperingTask.completed(java.lang.String,java.lang.String)",
+        "id": "-858857665"
+      },
+      {
+        "method": "POST",
+        "uri": "/SSRF/task1",
+        "requestParameter": [
+          {
+            "name": "url",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.ssrf.SSRFTask1",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.ssrf.SSRFTask1.completed(java.lang.String)",
+        "id": "2021924621"
+      },
+      {
+        "method": "POST",
+        "uri": "/users",
+        "requestParameter": [
+          {
+            "name": "newUser",
+            "required": true,
+            "className": "class org.owasp.webgoat.users.WebGoatUser",
+            "type": "REQUEST_BODY",
+            "bodyPojoRepresentation": {
+              "nestedObjects": [
+                {
+                  "typeName": "org.owasp.webgoat.users.WebGoatUser",
+                  "fields": {
+                    "accountNonExpired": {
+                      "typeName": "boolean",
+                      "isPrimitiveType": true
+                    },
+                    "accountNonLocked": {
+                      "typeName": "boolean",
+                      "isPrimitiveType": true
+                    },
+                    "authorities": {
+                      "typeName": "org.springframework.security.core.GrantedAuthority",
+                      "fieldType": "ARRAY_TYPE"
+                    },
+                    "credentialsNonExpired": {
+                      "typeName": "boolean",
+                      "isPrimitiveType": true
+                    },
+                    "enabled": {
+                      "typeName": "boolean",
+                      "isPrimitiveType": true
+                    },
+                    "password": {
+                      "typeName": "java.lang.String",
+                      "isPrimitiveType": true
+                    },
+                    "role": {
+                      "typeName": "java.lang.String",
+                      "isPrimitiveType": true
+                    },
+                    "user": {
+                      "typeName": "org.springframework.security.core.userdetails.User"
+                    },
+                    "username": {
+                      "typeName": "java.lang.String",
+                      "isPrimitiveType": true
+                    }
+                  }
+                },
+                {
+                  "typeName": "org.springframework.security.core.userdetails.User",
+                  "fields": {
+                    "accountNonExpired": {
+                      "typeName": "boolean",
+                      "isPrimitiveType": true
+                    },
+                    "accountNonLocked": {
+                      "typeName": "boolean",
+                      "isPrimitiveType": true
+                    },
+                    "authorities": {
+                      "typeName": "org.springframework.security.core.GrantedAuthority",
+                      "fieldType": "ARRAY_TYPE"
+                    },
+                    "credentialsNonExpired": {
+                      "typeName": "boolean",
+                      "isPrimitiveType": true
+                    },
+                    "enabled": {
+                      "typeName": "boolean",
+                      "isPrimitiveType": true
+                    },
+                    "password": {
+                      "typeName": "java.lang.String",
+                      "isPrimitiveType": true
+                    },
+                    "username": {
+                      "typeName": "java.lang.String",
+                      "isPrimitiveType": true
+                    }
+                  }
+                },
+                {
+                  "typeName": "org.springframework.security.core.GrantedAuthority",
+                  "fields": {
+                    "authority": {
+                      "typeName": "java.lang.String",
+                      "isPrimitiveType": true
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.missing_ac.MissingFunctionACUsers",
+        "handlerFunctionName": "addUser",
+        "handlerFunctionSignature": "public org.owasp.webgoat.users.WebGoatUser org.owasp.webgoat.missing_ac.MissingFunctionACUsers.addUser(org.owasp.webgoat.users.WebGoatUser)",
+        "id": "1577820163"
+      },
+      {
+        "method": "POST",
+        "uri": "/",
+        "requestParameter": [
+          {
+            "name": "newUser",
+            "required": true,
+            "className": "class org.owasp.webgoat.users.WebGoatUser",
+            "type": "REQUEST_BODY",
+            "bodyPojoRepresentation": {
+              "nestedObjects": [
+                {
+                  "typeName": "org.owasp.webgoat.users.WebGoatUser",
+                  "fields": {
+                    "accountNonExpired": {
+                      "typeName": "boolean",
+                      "isPrimitiveType": true
+                    },
+                    "accountNonLocked": {
+                      "typeName": "boolean",
+                      "isPrimitiveType": true
+                    },
+                    "authorities": {
+                      "typeName": "org.springframework.security.core.GrantedAuthority",
+                      "fieldType": "ARRAY_TYPE"
+                    },
+                    "credentialsNonExpired": {
+                      "typeName": "boolean",
+                      "isPrimitiveType": true
+                    },
+                    "enabled": {
+                      "typeName": "boolean",
+                      "isPrimitiveType": true
+                    },
+                    "password": {
+                      "typeName": "java.lang.String",
+                      "isPrimitiveType": true
+                    },
+                    "role": {
+                      "typeName": "java.lang.String",
+                      "isPrimitiveType": true
+                    },
+                    "user": {
+                      "typeName": "org.springframework.security.core.userdetails.User"
+                    },
+                    "username": {
+                      "typeName": "java.lang.String",
+                      "isPrimitiveType": true
+                    }
+                  }
+                },
+                {
+                  "typeName": "org.springframework.security.core.userdetails.User",
+                  "fields": {
+                    "accountNonExpired": {
+                      "typeName": "boolean",
+                      "isPrimitiveType": true
+                    },
+                    "accountNonLocked": {
+                      "typeName": "boolean",
+                      "isPrimitiveType": true
+                    },
+                    "authorities": {
+                      "typeName": "org.springframework.security.core.GrantedAuthority",
+                      "fieldType": "ARRAY_TYPE"
+                    },
+                    "credentialsNonExpired": {
+                      "typeName": "boolean",
+                      "isPrimitiveType": true
+                    },
+                    "enabled": {
+                      "typeName": "boolean",
+                      "isPrimitiveType": true
+                    },
+                    "password": {
+                      "typeName": "java.lang.String",
+                      "isPrimitiveType": true
+                    },
+                    "username": {
+                      "typeName": "java.lang.String",
+                      "isPrimitiveType": true
+                    }
+                  }
+                },
+                {
+                  "typeName": "org.springframework.security.core.GrantedAuthority",
+                  "fields": {
+                    "authority": {
+                      "typeName": "java.lang.String",
+                      "isPrimitiveType": true
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.missing_ac.MissingFunctionACUsers",
+        "handlerFunctionName": "addUser",
+        "handlerFunctionSignature": "public org.owasp.webgoat.users.WebGoatUser org.owasp.webgoat.missing_ac.MissingFunctionACUsers.addUser(org.owasp.webgoat.users.WebGoatUser)",
+        "id": "1638571621"
+      },
+      {
+        "method": "POST",
+        "uri": "/IDOR/diff-attributes",
+        "requestParameter": [
+          {
+            "name": "attributes",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.idor.IDORDiffAttributes",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.idor.IDORDiffAttributes.completed(java.lang.String)",
+        "id": "26381174"
+      },
+      {
+        "method": "POST",
+        "uri": "/IDOR/login",
+        "requestParameter": [
+          {
+            "name": "username",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "password",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.idor.IDORLogin",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.idor.IDORLogin.completed(java.lang.String,java.lang.String)",
+        "id": "1410744086"
+      },
+      {
+        "method": "POST",
+        "uri": "/CrossSiteScriptingStored/stored-xss-follow-up",
+        "requestParameter": [
+          {
+            "name": "successMessage",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.xss.stored.StoredCrossSiteScriptingVerifier",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.xss.stored.StoredCrossSiteScriptingVerifier.completed(java.lang.String)",
+        "id": "-1970697024"
+      },
+      {
+        "method": "POST",
+        "uri": "/PathTraversal/random",
+        "requestParameter": [
+          {
+            "name": "secret",
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.path_traversal.ProfileUploadRetrieval",
+        "handlerFunctionName": "execute",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.path_traversal.ProfileUploadRetrieval.execute(java.lang.String)",
+        "id": "-1757039635"
+      },
+      {
+        "method": "POST",
+        "uri": "/CrossSiteScripting/attack1",
+        "requestParameter": [
+          {
+            "name": "answer_xss_1",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.xss.CrossSiteScriptingLesson1",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.xss.CrossSiteScriptingLesson1.completed(java.lang.String)",
+        "id": "-1494777911"
+      },
+      {
+        "method": "POST",
+        "uri": "/auth-bypass/verify-account",
+        "requestParameter": [
+          {
+            "name": "userId",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "verifyMethod",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.auth_bypass.VerifyAccount",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.auth_bypass.VerifyAccount.completed(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest) throws javax.servlet.ServletException,java.io.IOException",
+        "id": "-491748329"
+      },
+      {
+        "method": "GET",
+        "uri": "/SqlInjectionAdvanced/quiz",
+        "controllerClass": "org.owasp.webgoat.sql_injection.advanced.SqlInjectionQuiz",
+        "handlerFunctionName": "getResults",
+        "handlerFunctionSignature": "public boolean[] org.owasp.webgoat.sql_injection.advanced.SqlInjectionQuiz.getResults()",
+        "id": "865263857"
+      },
+      {
+        "method": "POST",
+        "uri": "/SqlInjection/attack3",
+        "requestParameter": [
+          {
+            "name": "query",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.sql_injection.introduction.SqlInjectionLesson3",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.sql_injection.introduction.SqlInjectionLesson3.completed(java.lang.String)",
+        "id": "-1986884487"
+      },
+      {
+        "method": "GET",
+        "uri": "/PathTraversal/zip-slip/",
+        "controllerClass": "org.owasp.webgoat.path_traversal.ProfileZipSlip",
+        "handlerFunctionName": "getProfilePicture",
+        "handlerFunctionSignature": "public org.springframework.http.ResponseEntity\u003c?\u003e org.owasp.webgoat.path_traversal.ProfileZipSlip.getProfilePicture()",
+        "id": "-505222454"
+      },
+      {
+        "method": "GET",
+        "uri": "/crypto/signing/getprivate",
+        "controllerClass": "org.owasp.webgoat.crypto.SigningAssignment",
+        "handlerFunctionName": "getPrivateKey",
+        "handlerFunctionSignature": "public java.lang.String org.owasp.webgoat.crypto.SigningAssignment.getPrivateKey(javax.servlet.http.HttpServletRequest) throws java.security.NoSuchAlgorithmException,java.security.InvalidAlgorithmParameterException",
+        "id": "777901149"
+      },
+      {
+        "method": "POST",
+        "uri": "/JWT/refresh/newToken",
+        "requestParameter": [
+          {
+            "name": "json",
+            "className": "java.util.Map\u003cjava.lang.String, java.lang.Object\u003e",
+            "type": "REQUEST_BODY",
+            "bodyPojoRepresentation": {
+              "nestedObjects": [
+                {
+                  "typeName": "java.util.Map",
+                  "fields": {
+                    "delete_me": {
+                      "typeName": "java.lang.Object",
+                      "fieldType": "ARRAY_TYPE",
+                      "isPrimitiveType": true
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.jwt.JWTRefreshEndpoint",
+        "handlerFunctionName": "newToken",
+        "handlerFunctionSignature": "public org.springframework.http.ResponseEntity org.owasp.webgoat.jwt.JWTRefreshEndpoint.newToken(java.lang.String,java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)",
+        "id": "-976102772"
+      },
+      {
+        "method": "POST",
+        "uri": "/JWT/final/follow/{user}",
+        "requestParameter": [
+          {
+            "name": "user",
+            "required": true,
+            "className": "class java.lang.String",
+            "type": "PATH_PARAM"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.jwt.JWTFinalEndpoint",
+        "handlerFunctionName": "follow",
+        "handlerFunctionSignature": "public java.lang.String org.owasp.webgoat.jwt.JWTFinalEndpoint.follow(java.lang.String)",
+        "id": "-2103135856"
+      },
+      {
+        "method": "GET",
+        "uri": "/PasswordReset/reset/reset-password/{link}",
+        "requestParameter": [
+          {
+            "name": "link",
+            "required": true,
+            "className": "class java.lang.String",
+            "type": "PATH_PARAM"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.password_reset.ResetLinkAssignment",
+        "handlerFunctionName": "resetPassword",
+        "handlerFunctionSignature": "public org.springframework.web.servlet.ModelAndView org.owasp.webgoat.password_reset.ResetLinkAssignment.resetPassword(java.lang.String,org.springframework.ui.Model)",
+        "id": "-33801622"
+      },
+      {
+        "method": "POST",
+        "uri": "/register.mvc",
+        "requestParameter": [
+          {
+            "name": "userForm",
+            "required": true,
+            "className": "class org.owasp.webgoat.users.UserForm",
+            "type": "REQUEST_BODY",
+            "bodyPojoRepresentation": {
+              "nestedObjects": [
+                {
+                  "typeName": "org.owasp.webgoat.users.UserForm",
+                  "fields": {
+                    "agree": {
+                      "typeName": "java.lang.String",
+                      "isPrimitiveType": true
+                    },
+                    "matchingPassword": {
+                      "typeName": "java.lang.String",
+                      "isPrimitiveType": true
+                    },
+                    "password": {
+                      "typeName": "java.lang.String",
+                      "isPrimitiveType": true
+                    },
+                    "username": {
+                      "typeName": "java.lang.String",
+                      "isPrimitiveType": true
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.users.RegistrationController",
+        "handlerFunctionName": "registration",
+        "handlerFunctionSignature": "public java.lang.String org.owasp.webgoat.users.RegistrationController.registration(org.owasp.webgoat.users.UserForm,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest) throws javax.servlet.ServletException",
+        "id": "-367150261"
+      },
+      {
+        "method": "PUT",
+        "uri": "/IDOR/profile/{userId}",
+        "requestParameter": [
+          {
+            "name": "userId",
+            "required": true,
+            "className": "class java.lang.String",
+            "type": "PATH_PARAM"
+          },
+          {
+            "name": "userSubmittedProfile",
+            "required": true,
+            "className": "class org.owasp.webgoat.idor.UserProfile",
+            "type": "REQUEST_BODY",
+            "bodyPojoRepresentation": {
+              "nestedObjects": [
+                {
+                  "typeName": "org.owasp.webgoat.idor.UserProfile",
+                  "fields": {
+                    "admin": {
+                      "typeName": "boolean",
+                      "isPrimitiveType": true
+                    },
+                    "color": {
+                      "typeName": "java.lang.String",
+                      "isPrimitiveType": true
+                    },
+                    "name": {
+                      "typeName": "java.lang.String",
+                      "isPrimitiveType": true
+                    },
+                    "profileFromId": {
+                      "typeName": "java.lang.String",
+                      "isPrimitiveType": true
+                    },
+                    "role": {
+                      "typeName": "int",
+                      "isPrimitiveType": true
+                    },
+                    "size": {
+                      "typeName": "java.lang.String",
+                      "isPrimitiveType": true
+                    },
+                    "userId": {
+                      "typeName": "java.lang.String",
+                      "isPrimitiveType": true
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.idor.IDOREditOtherProfiile",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.idor.IDOREditOtherProfiile.completed(java.lang.String,org.owasp.webgoat.idor.UserProfile)",
+        "id": "-1640004685"
+      },
+      {
+        "method": "GET",
+        "uri": "/welcome.mvc",
+        "controllerClass": "org.owasp.webgoat.controller.Welcome",
+        "handlerFunctionName": "welcome",
+        "handlerFunctionSignature": "public org.springframework.web.servlet.ModelAndView org.owasp.webgoat.controller.Welcome.welcome(javax.servlet.http.HttpServletRequest)",
+        "id": "-15712946"
+      },
+      {
+        "method": "GET",
+        "uri": "/",
+        "controllerClass": "org.owasp.webgoat.controller.Welcome",
+        "handlerFunctionName": "welcome",
+        "handlerFunctionSignature": "public org.springframework.web.servlet.ModelAndView org.owasp.webgoat.controller.Welcome.welcome(javax.servlet.http.HttpServletRequest)",
+        "id": "-1023250736"
+      },
+      {
+        "method": "GET",
+        "uri": "/attack",
+        "controllerClass": "org.owasp.webgoat.HammerHead",
+        "handlerFunctionName": "attack",
+        "handlerFunctionSignature": "public org.springframework.web.servlet.ModelAndView org.owasp.webgoat.HammerHead.attack(org.springframework.security.core.Authentication,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)",
+        "id": "-975159693"
+      },
+      {
+        "method": "POST",
+        "uri": "/attack",
+        "controllerClass": "org.owasp.webgoat.HammerHead",
+        "handlerFunctionName": "attack",
+        "handlerFunctionSignature": "public org.springframework.web.servlet.ModelAndView org.owasp.webgoat.HammerHead.attack(org.springframework.security.core.Authentication,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)",
+        "id": "-164901629"
+      },
+      {
+        "method": "POST",
+        "uri": "/HttpBasics/attack2",
+        "requestParameter": [
+          {
+            "name": "answer",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "magic_answer",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "magic_num",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.http_basics.HttpBasicsQuiz",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.http_basics.HttpBasicsQuiz.completed(java.lang.String,java.lang.String,java.lang.String)",
+        "id": "1133791854"
+      },
+      {
+        "method": "GET",
+        "uri": "/JWT/votings",
+        "controllerClass": "org.owasp.webgoat.jwt.JWTVotesEndpoint",
+        "handlerFunctionName": "getVotes",
+        "handlerFunctionSignature": "public org.springframework.http.converter.json.MappingJacksonValue org.owasp.webgoat.jwt.JWTVotesEndpoint.getVotes(java.lang.String)",
+        "id": "-264196793"
+      },
+      {
+        "method": "GET",
+        "uri": "/PathTraversal/zip-slip/profile-image/{username}",
+        "requestParameter": [
+          {
+            "name": "username",
+            "required": true,
+            "className": "class java.lang.String",
+            "type": "PATH_PARAM"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.path_traversal.ProfileZipSlip",
+        "handlerFunctionName": "getProfilePicture",
+        "handlerFunctionSignature": "public org.springframework.http.ResponseEntity\u003c?\u003e org.owasp.webgoat.path_traversal.ProfileZipSlip.getProfilePicture(java.lang.String)",
+        "id": "471560971"
+      },
+      {
+        "method": "POST",
+        "uri": "/BypassRestrictions/frontendValidation",
+        "requestParameter": [
+          {
+            "name": "field1",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "field2",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "field3",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "field4",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "field5",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "field6",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "field7",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "error",
+            "required": true,
+            "className": "class java.lang.Integer"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.bypass_restrictions.BypassRestrictionsFrontendValidation",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.bypass_restrictions.BypassRestrictionsFrontendValidation.completed(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)",
+        "id": "-1081961667"
+      },
+      {
+        "method": "GET",
+        "uri": "/clientSideFiltering/salaries",
+        "controllerClass": "org.owasp.webgoat.client_side_filtering.Salaries",
+        "handlerFunctionName": "invoke",
+        "handlerFunctionSignature": "public java.util.List\u003cjava.util.Map\u003cjava.lang.String, java.lang.Object\u003e\u003e org.owasp.webgoat.client_side_filtering.Salaries.invoke()",
+        "id": "-1848096367"
+      },
+      {
+        "method": "POST",
+        "uri": "/SqlInjectionAdvanced/challenge_Login",
+        "requestParameter": [
+          {
+            "name": "username_login",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "password_login",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.sql_injection.advanced.SqlInjectionChallengeLogin",
+        "handlerFunctionName": "login",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.sql_injection.advanced.SqlInjectionChallengeLogin.login(java.lang.String,java.lang.String) throws java.lang.Exception",
+        "id": "-2052882653"
+      },
+      {
+        "method": "POST",
+        "uri": "/PasswordReset/questions",
+        "requestParameter": [
+          {
+            "name": "json",
+            "required": true,
+            "className": "java.util.Map\u003cjava.lang.String, java.lang.Object\u003e"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.password_reset.QuestionsAssignment",
+        "handlerFunctionName": "passwordReset",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.password_reset.QuestionsAssignment.passwordReset(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)",
+        "id": "-1246819991"
+      },
+      {
+        "method": "POST",
+        "uri": "/SqlInjection/attack4",
+        "requestParameter": [
+          {
+            "name": "query",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.sql_injection.introduction.SqlInjectionLesson4",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.sql_injection.introduction.SqlInjectionLesson4.completed(java.lang.String)",
+        "id": "-1547951463"
+      },
+      {
+        "method": "GET",
+        "uri": "/challenge/7/.git",
+        "controllerClass": "org.owasp.webgoat.challenges.challenge7.Assignment7",
+        "handlerFunctionName": "git",
+        "handlerFunctionSignature": "public org.springframework.core.io.ClassPathResource org.owasp.webgoat.challenges.challenge7.Assignment7.git()",
+        "id": "600672229"
+      },
+      {
+        "method": "GET",
+        "uri": "/lesson-template/shop/{user}",
+        "requestParameter": [
+          {
+            "name": "user",
+            "required": true,
+            "className": "class java.lang.String",
+            "type": "PATH_PARAM"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.template.SampleAttack",
+        "handlerFunctionName": "getItemsInBasket",
+        "handlerFunctionSignature": "public java.util.List\u003corg.owasp.webgoat.template.SampleAttack$Item\u003e org.owasp.webgoat.template.SampleAttack.getItemsInBasket(java.lang.String)",
+        "id": "905430016"
+      },
+      {
+        "method": "POST",
+        "uri": "/csrf/basic-get-flag",
+        "controllerClass": "org.owasp.webgoat.csrf.CSRFGetFlag",
+        "handlerFunctionName": "invoke",
+        "handlerFunctionSignature": "public java.util.Map\u003cjava.lang.String, java.lang.Object\u003e org.owasp.webgoat.csrf.CSRFGetFlag.invoke(javax.servlet.http.HttpServletRequest)",
+        "id": "-448092980"
+      },
+      {
+        "method": "POST",
+        "uri": "/SqlInjection/attack9",
+        "requestParameter": [
+          {
+            "name": "name",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "auth_tan",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.sql_injection.introduction.SqlInjectionLesson9",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.sql_injection.introduction.SqlInjectionLesson9.completed(java.lang.String,java.lang.String)",
+        "id": "-2122867974"
+      },
+      {
+        "method": "POST",
+        "uri": "/challenge/flag",
+        "requestParameter": [
+          {
+            "name": "flag",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.challenges.Flag",
+        "handlerFunctionName": "postFlag",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.challenges.Flag.postFlag(java.lang.String)",
+        "id": "-1215144577"
+      },
+      {
+        "method": "GET",
+        "uri": "/csrf/review",
+        "controllerClass": "org.owasp.webgoat.csrf.ForgedReviews",
+        "handlerFunctionName": "retrieveReviews",
+        "handlerFunctionSignature": "public java.util.Collection\u003corg.owasp.webgoat.csrf.Review\u003e org.owasp.webgoat.csrf.ForgedReviews.retrieveReviews()",
+        "id": "-1657144353"
+      },
+      {
+        "method": "POST",
+        "uri": "/access-control/user-hash",
+        "controllerClass": "org.owasp.webgoat.missing_ac.MissingFunctionACYourHash",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.missing_ac.MissingFunctionACYourHash.completed(java.lang.String)",
+        "id": "1231482209"
+      },
+      {
+        "method": "POST",
+        "uri": "/InsecureLogin/task",
+        "requestParameter": [
+          {
+            "name": "username",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "password",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.insecure_login.InsecureLoginTask",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.insecure_login.InsecureLoginTask.completed(java.lang.String,java.lang.String)",
+        "id": "-1226668940"
+      },
+      {
+        "method": "POST",
+        "uri": "/clientSideFiltering/attack1",
+        "requestParameter": [
+          {
+            "name": "answer",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.client_side_filtering.ClientSideFilteringAssignment",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.client_side_filtering.ClientSideFilteringAssignment.completed(java.lang.String)",
+        "id": "29045133"
+      },
+      {
+        "method": "GET",
+        "uri": "/clientSideFiltering/challenge-store/coupons/{code}",
+        "requestParameter": [
+          {
+            "name": "code",
+            "required": true,
+            "className": "class java.lang.String",
+            "type": "PATH_PARAM"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.client_side_filtering.ShopEndpoint",
+        "handlerFunctionName": "getDiscountCode",
+        "handlerFunctionSignature": "public org.owasp.webgoat.client_side_filtering.ShopEndpoint$CheckoutCode org.owasp.webgoat.client_side_filtering.ShopEndpoint.getDiscountCode(java.lang.String)",
+        "id": "-1215823829"
+      },
+      {
+        "method": "POST",
+        "uri": "/JWT/decode",
+        "requestParameter": [
+          {
+            "name": "jwt-encode-user",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.jwt.JWTDecodeEndpoint",
+        "handlerFunctionName": "decode",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.jwt.JWTDecodeEndpoint.decode(java.lang.String)",
+        "id": "-909068876"
+      },
+      {
+        "method": "POST",
+        "uri": "/SqlInjectionAdvanced/attack6b",
+        "requestParameter": [
+          {
+            "name": "userid_6b",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.sql_injection.advanced.SqlInjectionLesson6b",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.sql_injection.advanced.SqlInjectionLesson6b.completed(java.lang.String) throws java.io.IOException",
+        "id": "1321971989"
+      },
+      {
+        "method": "POST",
+        "uri": "/crypto/secure/defaults",
+        "requestParameter": [
+          {
+            "name": "secretFileName",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "secretText",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.crypto.SecureDefaultsAssignment",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.crypto.SecureDefaultsAssignment.completed(java.lang.String,java.lang.String) throws java.security.NoSuchAlgorithmException",
+        "id": "2024393645"
+      },
+      {
+        "method": "POST",
+        "uri": "/crypto/signing/verify",
+        "requestParameter": [
+          {
+            "name": "modulus",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "signature",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.crypto.SigningAssignment",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.crypto.SigningAssignment.completed(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)",
+        "id": "1632089822"
+      },
+      {
+        "method": "POST",
+        "uri": "/JWT/secret",
+        "requestParameter": [
+          {
+            "name": "token",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.jwt.JWTSecretKeyEndpoint",
+        "handlerFunctionName": "login",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.jwt.JWTSecretKeyEndpoint.login(java.lang.String)",
+        "id": "1103015056"
+      },
+      {
+        "method": "POST",
+        "uri": "/CrossSiteScriptingStored/stored-xss",
+        "requestParameter": [
+          {
+            "name": "commentStr",
+            "required": true,
+            "className": "class java.lang.String",
+            "type": "REQUEST_BODY",
+            "bodyPojoRepresentation": {
+              "nestedObjects": [
+                {
+                  "typeName": "java.lang.String"
+                }
+              ]
+            }
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.xss.stored.StoredXssComments",
+        "handlerFunctionName": "createNewComment",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.xss.stored.StoredXssComments.createNewComment(java.lang.String)",
+        "id": "-1778541328"
+      },
+      {
+        "method": "POST",
+        "uri": "/JWT/refresh/checkout",
+        "controllerClass": "org.owasp.webgoat.jwt.JWTRefreshEndpoint",
+        "handlerFunctionName": "checkout",
+        "handlerFunctionSignature": "public org.springframework.http.ResponseEntity\u003corg.owasp.webgoat.assignments.AttackResult\u003e org.owasp.webgoat.jwt.JWTRefreshEndpoint.checkout(java.lang.String)",
+        "id": "1506884658"
+      },
+      {
+        "method": "POST",
+        "uri": "/ChromeDevTools/network",
+        "requestParameter": [
+          {
+            "name": "networkNum",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.chrome_dev_tools.NetworkLesson",
+        "handlerFunctionName": "ok",
+        "handlerFunctionSignature": "public org.springframework.http.ResponseEntity\u003c?\u003e org.owasp.webgoat.chrome_dev_tools.NetworkLesson.ok(java.lang.String)",
+        "id": "2097240670"
+      },
+      {
+        "method": "POST",
+        "uri": "/JWT/final/delete",
+        "requestParameter": [
+          {
+            "name": "token",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.jwt.JWTFinalEndpoint",
+        "handlerFunctionName": "resetVotes",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.jwt.JWTFinalEndpoint.resetVotes(java.lang.String)",
+        "id": "835327198"
+      },
+      {
+        "method": "POST",
+        "uri": "/challenge/1",
+        "requestParameter": [
+          {
+            "name": "username",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "password",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.challenges.challenge1.Assignment1",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.challenges.challenge1.Assignment1.completed(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)",
+        "id": "-1990831891"
+      },
+      {
+        "method": "POST",
+        "uri": "/csrf/review",
+        "controllerClass": "org.owasp.webgoat.csrf.ForgedReviews",
+        "handlerFunctionName": "createNewReview",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.csrf.ForgedReviews.createNewReview(java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpServletRequest)",
+        "id": "495430094"
+      },
+      {
+        "method": "POST",
+        "uri": "/PasswordReset/reset/login",
+        "requestParameter": [
+          {
+            "name": "password",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "email",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.password_reset.ResetLinkAssignment",
+        "handlerFunctionName": "login",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.password_reset.ResetLinkAssignment.login(java.lang.String,java.lang.String)",
+        "id": "1991837114"
+      },
+      {
+        "method": "GET",
+        "uri": "/scoreboard-data",
+        "controllerClass": "org.owasp.webgoat.users.Scoreboard",
+        "handlerFunctionName": "getRankings",
+        "handlerFunctionSignature": "public java.util.List\u003corg.owasp.webgoat.users.Scoreboard$Ranking\u003e org.owasp.webgoat.users.Scoreboard.getRankings()",
+        "id": "-987852373"
+      },
+      {
+        "method": "GET",
+        "uri": "/challenge/8/notUsed",
+        "controllerClass": "org.owasp.webgoat.challenges.challenge8.Assignment8",
+        "handlerFunctionName": "notUsed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.challenges.challenge8.Assignment8.notUsed()",
+        "id": "-1583646239"
+      },
+      {
+        "method": "POST",
+        "uri": "/PathTraversal/profile-upload-remove-user-input",
+        "requestParameter": [
+          {
+            "name": "uploadedFileRemoveUserInput",
+            "required": true,
+            "className": "interface org.springframework.web.multipart.MultipartFile"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.path_traversal.ProfileUploadRemoveUserInput",
+        "handlerFunctionName": "uploadFileHandler",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.path_traversal.ProfileUploadRemoveUserInput.uploadFileHandler(org.springframework.web.multipart.MultipartFile)",
+        "id": "-553320864"
+      },
+      {
+        "method": "POST",
+        "uri": "/WebWolf/mail",
+        "requestParameter": [
+          {
+            "name": "uniqueCode",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.webwolf_introduction.MailAssignment",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.webwolf_introduction.MailAssignment.completed(java.lang.String)",
+        "id": "463736915"
+      },
+      {
+        "method": "GET",
+        "uri": "/error.html",
+        "controllerClass": "org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController",
+        "handlerFunctionName": "error",
+        "handlerFunctionSignature": "public org.springframework.http.ResponseEntity\u003cjava.util.Map\u003cjava.lang.String, java.lang.Object\u003e\u003e org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)",
+        "id": "-1553087153"
+      },
+      {
+        "method": "GET",
+        "uri": "/IDOR/profile/{userId}",
+        "requestParameter": [
+          {
+            "name": "userId",
+            "required": true,
+            "className": "class java.lang.String",
+            "type": "PATH_PARAM"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.idor.IDORViewOtherProfile",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.idor.IDORViewOtherProfile.completed(java.lang.String,javax.servlet.http.HttpServletResponse)",
+        "id": "1522975918"
+      },
+      {
+        "method": "GET",
+        "uri": "/JWT/votings/login",
+        "requestParameter": [
+          {
+            "name": "user",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.jwt.JWTVotesEndpoint",
+        "handlerFunctionName": "login",
+        "handlerFunctionSignature": "public void org.owasp.webgoat.jwt.JWTVotesEndpoint.login(java.lang.String,javax.servlet.http.HttpServletResponse)",
+        "id": "482681413"
+      },
+      {
+        "method": "POST",
+        "uri": "/JWT/quiz",
+        "requestParameter": [
+          {
+            "name": "question_0_solution",
+            "required": true,
+            "className": "class [Ljava.lang.String;"
+          },
+          {
+            "name": "question_1_solution",
+            "required": true,
+            "className": "class [Ljava.lang.String;"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.jwt.JWTQuiz",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.jwt.JWTQuiz.completed(java.lang.String[],java.lang.String[])",
+        "id": "874558877"
+      },
+      {
+        "method": "POST",
+        "uri": "/csrf/login",
+        "controllerClass": "org.owasp.webgoat.csrf.CSRFLogin",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.csrf.CSRFLogin.completed(javax.servlet.http.HttpServletRequest)",
+        "id": "-437144089"
+      },
+      {
+        "method": "PUT",
+        "uri": "/SqlInjectionAdvanced/challenge",
+        "requestParameter": [
+          {
+            "name": "username_reg",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "email_reg",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "password_reg",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.sql_injection.advanced.SqlInjectionChallenge",
+        "handlerFunctionName": "registerNewUser",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.sql_injection.advanced.SqlInjectionChallenge.registerNewUser(java.lang.String,java.lang.String,java.lang.String) throws java.lang.Exception",
+        "id": "1348712097"
+      },
+      {
+        "method": "POST",
+        "uri": "/ChromeDevTools/dummy",
+        "requestParameter": [
+          {
+            "name": "successMessage",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.chrome_dev_tools.NetworkDummy",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.chrome_dev_tools.NetworkDummy.completed(java.lang.String)",
+        "id": "-331353137"
+      },
+      {
+        "method": "POST",
+        "uri": "/IDOR/profile/alt-path",
+        "requestParameter": [
+          {
+            "name": "url",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.idor.IDORViewOwnProfileAltUrl",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.idor.IDORViewOwnProfileAltUrl.completed(java.lang.String)",
+        "id": "217714666"
+      },
+      {
+        "method": "POST",
+        "uri": "/PasswordReset/reset/change-password",
+        "controllerClass": "org.owasp.webgoat.password_reset.ResetLinkAssignment",
+        "handlerFunctionName": "changePassword",
+        "handlerFunctionSignature": "public org.springframework.web.servlet.ModelAndView org.owasp.webgoat.password_reset.ResetLinkAssignment.changePassword(org.owasp.webgoat.password_reset.resetlink.PasswordChangeForm,org.springframework.validation.BindingResult)",
+        "id": "-1640104098"
+      },
+      {
+        "method": "POST",
+        "uri": "/SqlInjectionAdvanced/attack6a",
+        "requestParameter": [
+          {
+            "name": "userid_6a",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.sql_injection.advanced.SqlInjectionLesson6a",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.sql_injection.advanced.SqlInjectionLesson6a.completed(java.lang.String)",
+        "id": "-1173054955"
+      },
+      {
+        "method": "POST",
+        "uri": "/SqlInjection/attack10",
+        "requestParameter": [
+          {
+            "name": "action_string",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.sql_injection.introduction.SqlInjectionLesson10",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.sql_injection.introduction.SqlInjectionLesson10.completed(java.lang.String)",
+        "id": "924195975"
+      },
+      {
+        "method": "POST",
+        "uri": "/crypto/encoding/basic-auth",
+        "requestParameter": [
+          {
+            "name": "answer_user",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "answer_pwd",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.crypto.EncodingAssignment",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.crypto.EncodingAssignment.completed(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)",
+        "id": "1837210296"
+      },
+      {
+        "method": "GET",
+        "uri": "/CrossSiteScriptingStored/stored-xss",
+        "controllerClass": "org.owasp.webgoat.xss.stored.StoredXssComments",
+        "handlerFunctionName": "retrieveComments",
+        "handlerFunctionSignature": "public java.util.Collection\u003corg.owasp.webgoat.xss.Comment\u003e org.owasp.webgoat.xss.stored.StoredXssComments.retrieveComments()",
+        "id": "1943039572"
+      },
+      {
+        "method": "POST",
+        "uri": "/SqlInjectionMitigations/attack12a",
+        "requestParameter": [
+          {
+            "name": "ip",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.sql_injection.mitigation.SqlInjectionLesson13",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.sql_injection.mitigation.SqlInjectionLesson13.completed(java.lang.String)",
+        "id": "-1057448660"
+      },
+      {
+        "method": "GET",
+        "uri": "/JWT/quiz",
+        "controllerClass": "org.owasp.webgoat.jwt.JWTQuiz",
+        "handlerFunctionName": "getResults",
+        "handlerFunctionSignature": "public boolean[] org.owasp.webgoat.jwt.JWTQuiz.getResults()",
+        "id": "-1086143406"
+      },
+      {
+        "method": "GET",
+        "uri": "/PathTraversal/random-picture",
+        "controllerClass": "org.owasp.webgoat.path_traversal.ProfileUploadRetrieval",
+        "handlerFunctionName": "getProfilePicture",
+        "handlerFunctionSignature": "public org.springframework.http.ResponseEntity\u003c?\u003e org.owasp.webgoat.path_traversal.ProfileUploadRetrieval.getProfilePicture(javax.servlet.http.HttpServletRequest)",
+        "id": "-1133516360"
+      },
+      {
+        "method": "POST",
+        "uri": "/SqlOnlyInputValidationOnKeywords/attack",
+        "requestParameter": [
+          {
+            "name": "userid_sql_only_input_validation_on_keywords",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.sql_injection.mitigation.SqlOnlyInputValidationOnKeywords",
+        "handlerFunctionName": "attack",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.sql_injection.mitigation.SqlOnlyInputValidationOnKeywords.attack(java.lang.String)",
+        "id": "-858515509"
+      },
+      {
+        "method": "POST",
+        "uri": "/SSRF/task2",
+        "requestParameter": [
+          {
+            "name": "url",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.ssrf.SSRFTask2",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.ssrf.SSRFTask2.completed(java.lang.String)",
+        "id": "998154221"
+      },
+      {
+        "method": "GET",
+        "uri": "/service/labels.mvc",
+        "requestParameter": [
+          {
+            "name": "lang",
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.service.LabelService",
+        "handlerFunctionName": "fetchLabels",
+        "handlerFunctionSignature": "public org.springframework.http.ResponseEntity\u003cjava.util.Properties\u003e org.owasp.webgoat.service.LabelService.fetchLabels(java.lang.String)",
+        "id": "927929641"
+      },
+      {
+        "method": "GET",
+        "uri": "/crypto/hashing/md5",
+        "controllerClass": "org.owasp.webgoat.crypto.HashingAssignment",
+        "handlerFunctionName": "getMd5",
+        "handlerFunctionSignature": "public java.lang.String org.owasp.webgoat.crypto.HashingAssignment.getMd5(javax.servlet.http.HttpServletRequest) throws java.security.NoSuchAlgorithmException",
+        "id": "-852765972"
+      },
+      {
+        "method": "POST",
+        "uri": "/PasswordReset/ForgotPassword/create-password-reset-link",
+        "requestParameter": [
+          {
+            "name": "email",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.password_reset.ResetLinkAssignmentForgotPassword",
+        "handlerFunctionName": "sendPasswordResetLink",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.password_reset.ResetLinkAssignmentForgotPassword.sendPasswordResetLink(java.lang.String,javax.servlet.http.HttpServletRequest)",
+        "id": "-175965066"
+      },
+      {
+        "method": "POST",
+        "uri": "/SqlInjectionAdvanced/quiz",
+        "requestParameter": [
+          {
+            "name": "question_0_solution",
+            "required": true,
+            "className": "class [Ljava.lang.String;"
+          },
+          {
+            "name": "question_1_solution",
+            "required": true,
+            "className": "class [Ljava.lang.String;"
+          },
+          {
+            "name": "question_2_solution",
+            "required": true,
+            "className": "class [Ljava.lang.String;"
+          },
+          {
+            "name": "question_3_solution",
+            "required": true,
+            "className": "class [Ljava.lang.String;"
+          },
+          {
+            "name": "question_4_solution",
+            "required": true,
+            "className": "class [Ljava.lang.String;"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.sql_injection.advanced.SqlInjectionQuiz",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.sql_injection.advanced.SqlInjectionQuiz.completed(java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[]) throws java.io.IOException",
+        "id": "-1986728249"
+      },
+      {
+        "method": "POST",
+        "uri": "/SqlInjection/attack2",
+        "requestParameter": [
+          {
+            "name": "query",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.sql_injection.introduction.SqlInjectionLesson2",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.sql_injection.introduction.SqlInjectionLesson2.completed(java.lang.String)",
+        "id": "1869149785"
+      },
+      {
+        "method": "GET",
+        "uri": "/challenge/8/vote/{stars}",
+        "requestParameter": [
+          {
+            "name": "stars",
+            "required": true,
+            "className": "int",
+            "type": "PATH_PARAM"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.challenges.challenge8.Assignment8",
+        "handlerFunctionName": "vote",
+        "handlerFunctionSignature": "public org.springframework.http.ResponseEntity\u003c?\u003e org.owasp.webgoat.challenges.challenge8.Assignment8.vote(int,javax.servlet.http.HttpServletRequest)",
+        "id": "1052102831"
+      },
+      {
+        "method": "GET",
+        "uri": "/SqlInjectionMitigations/servers",
+        "requestParameter": [
+          {
+            "name": "column",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.sql_injection.mitigation.Servers",
+        "handlerFunctionName": "sort",
+        "handlerFunctionSignature": "public java.util.List\u003corg.owasp.webgoat.sql_injection.mitigation.Servers$Server\u003e org.owasp.webgoat.sql_injection.mitigation.Servers.sort(java.lang.String) throws java.lang.Exception",
+        "id": "-402971977"
+      },
+      {
+        "method": "GET",
+        "uri": "/startlesson.mvc",
+        "controllerClass": "org.owasp.webgoat.controller.StartLesson",
+        "handlerFunctionName": "start",
+        "handlerFunctionSignature": "public org.springframework.web.servlet.ModelAndView org.owasp.webgoat.controller.StartLesson.start()",
+        "id": "1487258581"
+      },
+      {
+        "method": "POST",
+        "uri": "/startlesson.mvc",
+        "controllerClass": "org.owasp.webgoat.controller.StartLesson",
+        "handlerFunctionName": "start",
+        "handlerFunctionSignature": "public org.springframework.web.servlet.ModelAndView org.owasp.webgoat.controller.StartLesson.start()",
+        "id": "-1139346463"
+      },
+      {
+        "method": "POST",
+        "uri": "/csrf/feedback",
+        "requestParameter": [
+          {
+            "name": "confirmFlagVal",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.csrf.CSRFFeedback",
+        "handlerFunctionName": "flag",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.csrf.CSRFFeedback.flag(java.lang.String)",
+        "id": "1190182496"
+      },
+      {
+        "method": "GET",
+        "uri": "/service/lessoninfo.mvc",
+        "controllerClass": "org.owasp.webgoat.service.LessonInfoService",
+        "handlerFunctionName": "getLessonInfo",
+        "handlerFunctionSignature": "public org.owasp.webgoat.lessons.LessonInfoModel org.owasp.webgoat.service.LessonInfoService.getLessonInfo()",
+        "id": "-1803161321"
+      },
+      {
+        "method": "POST",
+        "uri": "/PasswordReset/simple-mail/reset",
+        "requestParameter": [
+          {
+            "name": "emailReset",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.password_reset.SimpleMailAssignment",
+        "handlerFunctionName": "resetPassword",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.password_reset.SimpleMailAssignment.resetPassword(java.lang.String)",
+        "id": "-994818691"
+      },
+      {
+        "method": "GET",
+        "uri": "/PasswordReset/reset/change-password",
+        "controllerClass": "org.owasp.webgoat.password_reset.ResetLinkAssignment",
+        "handlerFunctionName": "illegalCall",
+        "handlerFunctionSignature": "public org.springframework.web.servlet.ModelAndView org.owasp.webgoat.password_reset.ResetLinkAssignment.illegalCall()",
+        "id": "1725488001"
+      },
+      {
+        "method": "GET",
+        "uri": "/IDOR/own",
+        "controllerClass": "org.owasp.webgoat.idor.IDORViewOwnProfile",
+        "handlerFunctionName": "invoke",
+        "handlerFunctionSignature": "public java.util.Map\u003cjava.lang.String, java.lang.Object\u003e org.owasp.webgoat.idor.IDORViewOwnProfile.invoke()",
+        "id": "-1129633303"
+      },
+      {
+        "method": "GET",
+        "uri": "/IDOR/profile",
+        "controllerClass": "org.owasp.webgoat.idor.IDORViewOwnProfile",
+        "handlerFunctionName": "invoke",
+        "handlerFunctionSignature": "public java.util.Map\u003cjava.lang.String, java.lang.Object\u003e org.owasp.webgoat.idor.IDORViewOwnProfile.invoke()",
+        "id": "-613985178"
+      },
+      {
+        "method": "GET",
+        "uri": "/service/debug/labels.mvc",
+        "controllerClass": "org.owasp.webgoat.service.LabelDebugService",
+        "handlerFunctionName": "checkDebuggingStatus",
+        "handlerFunctionSignature": "public org.springframework.http.ResponseEntity\u003cjava.util.Map\u003cjava.lang.String, java.lang.Object\u003e\u003e org.owasp.webgoat.service.LabelDebugService.checkDebuggingStatus()",
+        "id": "-77830763"
+      },
+      {
+        "method": "POST",
+        "uri": "/VulnerableComponents/attack1",
+        "requestParameter": [
+          {
+            "name": "payload",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.vulnerable_components.VulnerableComponentsLesson",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.vulnerable_components.VulnerableComponentsLesson.completed(java.lang.String)",
+        "id": "1113441083"
+      },
+      {
+        "method": "GET",
+        "uri": "/service/restartlesson.mvc",
+        "controllerClass": "org.owasp.webgoat.service.RestartLessonService",
+        "handlerFunctionName": "restartLesson",
+        "handlerFunctionSignature": "public void org.owasp.webgoat.service.RestartLessonService.restartLesson()",
+        "id": "497021877"
+      },
+      {
+        "method": "GET",
+        "uri": "/challenge/8/votes/",
+        "controllerClass": "org.owasp.webgoat.challenges.challenge8.Assignment8",
+        "handlerFunctionName": "getVotes",
+        "handlerFunctionSignature": "public org.springframework.http.ResponseEntity\u003c?\u003e org.owasp.webgoat.challenges.challenge8.Assignment8.getVotes()",
+        "id": "1334758658"
+      },
+      {
+        "method": "POST",
+        "uri": "/CrossSiteScripting/quiz",
+        "requestParameter": [
+          {
+            "name": "question_0_solution",
+            "required": true,
+            "className": "class [Ljava.lang.String;"
+          },
+          {
+            "name": "question_1_solution",
+            "required": true,
+            "className": "class [Ljava.lang.String;"
+          },
+          {
+            "name": "question_2_solution",
+            "required": true,
+            "className": "class [Ljava.lang.String;"
+          },
+          {
+            "name": "question_3_solution",
+            "required": true,
+            "className": "class [Ljava.lang.String;"
+          },
+          {
+            "name": "question_4_solution",
+            "required": true,
+            "className": "class [Ljava.lang.String;"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.xss.CrossSiteScriptingQuiz",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.xss.CrossSiteScriptingQuiz.completed(java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[]) throws java.io.IOException",
+        "id": "1520964593"
+      },
+      {
+        "method": "POST",
+        "uri": "/xxe/blind",
+        "requestParameter": [
+          {
+            "name": "commentStr",
+            "required": true,
+            "className": "class java.lang.String",
+            "type": "REQUEST_BODY",
+            "bodyPojoRepresentation": {
+              "nestedObjects": [
+                {
+                  "typeName": "java.lang.String"
+                }
+              ]
+            }
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.xxe.BlindSendFileAssignment",
+        "handlerFunctionName": "addComment",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.xxe.BlindSendFileAssignment.addComment(javax.servlet.http.HttpServletRequest,java.lang.String)",
+        "id": "352187214"
+      },
+      {
+        "method": "POST",
+        "uri": "/JWT/refresh/login",
+        "requestParameter": [
+          {
+            "name": "json",
+            "className": "java.util.Map\u003cjava.lang.String, java.lang.Object\u003e",
+            "type": "REQUEST_BODY",
+            "bodyPojoRepresentation": {
+              "nestedObjects": [
+                {
+                  "typeName": "java.util.Map",
+                  "fields": {
+                    "delete_me": {
+                      "typeName": "java.lang.Object",
+                      "fieldType": "ARRAY_TYPE",
+                      "isPrimitiveType": true
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.jwt.JWTRefreshEndpoint",
+        "handlerFunctionName": "follow",
+        "handlerFunctionSignature": "public org.springframework.http.ResponseEntity org.owasp.webgoat.jwt.JWTRefreshEndpoint.follow(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)",
+        "id": "664801507"
+      },
+      {
+        "method": "POST",
+        "uri": "/CrossSiteScripting/attack6a",
+        "requestParameter": [
+          {
+            "name": "DOMTestRoute",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.xss.CrossSiteScriptingLesson6a",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.xss.CrossSiteScriptingLesson6a.completed(java.lang.String)",
+        "id": "-1736420095"
+      },
+      {
+        "method": "POST",
+        "uri": "/SqlInjection/assignment5b",
+        "requestParameter": [
+          {
+            "name": "userid",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "login_count",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.sql_injection.introduction.SqlInjectionLesson5b",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.sql_injection.introduction.SqlInjectionLesson5b.completed(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest) throws java.io.IOException",
+        "id": "490716012"
+      },
+      {
+        "method": "GET",
+        "uri": "/service/lessonoverview.mvc",
+        "controllerClass": "org.owasp.webgoat.service.LessonProgressService",
+        "handlerFunctionName": "lessonOverview",
+        "handlerFunctionSignature": "public java.util.List\u003corg.owasp.webgoat.service.LessonProgressService$LessonOverview\u003e org.owasp.webgoat.service.LessonProgressService.lessonOverview()",
+        "id": "-1904133886"
+      },
+      {
+        "method": "GET",
+        "uri": "/*.lesson",
+        "controllerClass": "org.owasp.webgoat.controller.StartLesson",
+        "handlerFunctionName": "lessonPage",
+        "handlerFunctionSignature": "public org.springframework.web.servlet.ModelAndView org.owasp.webgoat.controller.StartLesson.lessonPage(javax.servlet.http.HttpServletRequest)",
+        "id": "1415976645"
+      },
+      {
+        "method": "POST",
+        "uri": "/CrossSiteScripting/dom-follow-up",
+        "requestParameter": [
+          {
+            "name": "successMessage",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.xss.DOMCrossSiteScriptingVerifier",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.xss.DOMCrossSiteScriptingVerifier.completed(java.lang.String)",
+        "id": "-1530620659"
+      },
+      {
+        "method": "GET",
+        "uri": "/xxe/comments",
+        "controllerClass": "org.owasp.webgoat.xxe.CommentsEndpoint",
+        "handlerFunctionName": "retrieveComments",
+        "handlerFunctionSignature": "public java.util.Collection\u003corg.owasp.webgoat.xxe.Comment\u003e org.owasp.webgoat.xxe.CommentsEndpoint.retrieveComments()",
+        "id": "943162117"
+      },
+      {
+        "method": "GET",
+        "uri": "/PathTraversal/profile-picture-fix",
+        "controllerClass": "org.owasp.webgoat.path_traversal.ProfileUploadFix",
+        "handlerFunctionName": "getProfilePicture",
+        "handlerFunctionSignature": "public org.springframework.http.ResponseEntity\u003c?\u003e org.owasp.webgoat.path_traversal.ProfileUploadFix.getProfilePicture()",
+        "id": "-1763802344"
+      },
+      {
+        "method": "POST",
+        "uri": "/JWT/votings",
+        "controllerClass": "org.owasp.webgoat.jwt.JWTVotesEndpoint",
+        "handlerFunctionName": "resetVotes",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.jwt.JWTVotesEndpoint.resetVotes(java.lang.String)",
+        "id": "1174398271"
+      },
+      {
+        "method": "POST",
+        "uri": "/PathTraversal/profile-upload-fix",
+        "requestParameter": [
+          {
+            "name": "uploadedFileFix",
+            "required": true,
+            "className": "interface org.springframework.web.multipart.MultipartFile"
+          },
+          {
+            "name": "fullNameFix",
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.path_traversal.ProfileUploadFix",
+        "handlerFunctionName": "uploadFileHandler",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.path_traversal.ProfileUploadFix.uploadFileHandler(org.springframework.web.multipart.MultipartFile,java.lang.String)",
+        "id": "1582635653"
+      },
+      {
+        "method": "POST",
+        "uri": "/access-control/hidden-menu",
+        "controllerClass": "org.owasp.webgoat.missing_ac.MissingFunctionACHiddenMenus",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.missing_ac.MissingFunctionACHiddenMenus.completed(java.lang.String,java.lang.String)",
+        "id": "-811329201"
+      },
+      {
+        "method": "GET",
+        "uri": "/service/lessontitle.mvc",
+        "controllerClass": "org.owasp.webgoat.service.LessonTitleService",
+        "handlerFunctionName": "showPlan",
+        "handlerFunctionSignature": "public java.lang.String org.owasp.webgoat.service.LessonTitleService.showPlan()",
+        "id": "1612364113"
+      },
+      {
+        "method": "GET",
+        "uri": "/service/session.mvc",
+        "controllerClass": "org.owasp.webgoat.service.SessionService",
+        "handlerFunctionName": "showSession",
+        "handlerFunctionSignature": "public java.lang.String org.owasp.webgoat.service.SessionService.showSession(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)",
+        "id": "-1516449294"
+      },
+      {
+        "method": "POST",
+        "uri": "/lesson-template/sample-attack",
+        "requestParameter": [
+          {
+            "name": "param1",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "param2",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.template.SampleAttack",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.template.SampleAttack.completed(java.lang.String,java.lang.String)",
+        "id": "-382002630"
+      },
+      {
+        "method": "POST",
+        "uri": "/SecurePasswords/assignment",
+        "requestParameter": [
+          {
+            "name": "password",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.secure_password.SecurePasswordsAssignment",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.secure_password.SecurePasswordsAssignment.completed(java.lang.String)",
+        "id": "-796752950"
+      },
+      {
+        "method": "GET",
+        "uri": "/users",
+        "controllerClass": "org.owasp.webgoat.missing_ac.MissingFunctionACUsers",
+        "handlerFunctionName": "listUsers",
+        "handlerFunctionSignature": "public org.springframework.web.servlet.ModelAndView org.owasp.webgoat.missing_ac.MissingFunctionACUsers.listUsers(javax.servlet.http.HttpServletRequest)",
+        "id": "-1259918195"
+      },
+      {
+        "method": "POST",
+        "uri": "/SqlInjection/attack8",
+        "requestParameter": [
+          {
+            "name": "name",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "auth_tan",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.sql_injection.introduction.SqlInjectionLesson8",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.sql_injection.introduction.SqlInjectionLesson8.completed(java.lang.String,java.lang.String)",
+        "id": "-1640116168"
+      },
+      {
+        "method": "POST",
+        "uri": "/SqlInjection/assignment5a",
+        "requestParameter": [
+          {
+            "name": "account",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "operator",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "injection",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.sql_injection.introduction.SqlInjectionLesson5a",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.sql_injection.introduction.SqlInjectionLesson5a.completed(java.lang.String,java.lang.String,java.lang.String)",
+        "id": "-90664314"
+      },
+      {
+        "method": "GET",
+        "uri": "/cia/quiz",
+        "controllerClass": "org.owasp.webgoat.cia.CIAQuiz",
+        "handlerFunctionName": "getResults",
+        "handlerFunctionSignature": "public boolean[] org.owasp.webgoat.cia.CIAQuiz.getResults()",
+        "id": "-1133655170"
+      },
+      {
+        "method": "GET",
+        "uri": "/service/reportcard.mvc",
+        "controllerClass": "org.owasp.webgoat.service.ReportCardService",
+        "handlerFunctionName": "reportCard",
+        "handlerFunctionSignature": "public org.owasp.webgoat.service.ReportCardService$ReportCard org.owasp.webgoat.service.ReportCardService.reportCard()",
+        "id": "-1152564207"
+      },
+      {
+        "method": "POST",
+        "uri": "/cia/quiz",
+        "requestParameter": [
+          {
+            "name": "question_0_solution",
+            "required": true,
+            "className": "class [Ljava.lang.String;"
+          },
+          {
+            "name": "question_1_solution",
+            "required": true,
+            "className": "class [Ljava.lang.String;"
+          },
+          {
+            "name": "question_2_solution",
+            "required": true,
+            "className": "class [Ljava.lang.String;"
+          },
+          {
+            "name": "question_3_solution",
+            "required": true,
+            "className": "class [Ljava.lang.String;"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.cia.CIAQuiz",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.cia.CIAQuiz.completed(java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[])",
+        "id": "444013457"
+      },
+      {
+        "method": "GET",
+        "uri": "/error.html",
+        "controllerClass": "org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController",
+        "handlerFunctionName": "errorHtml",
+        "handlerFunctionSignature": "public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)",
+        "id": "-1290604915"
+      },
+      {
+        "method": "POST",
+        "uri": "/crypto/encoding/xor",
+        "requestParameter": [
+          {
+            "name": "answer_pwd1",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.crypto.XOREncodingAssignment",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.crypto.XOREncodingAssignment.completed(java.lang.String)",
+        "id": "-780455839"
+      },
+      {
+        "method": "POST",
+        "uri": "/challenge/5",
+        "requestParameter": [
+          {
+            "name": "username_login",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "password_login",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.challenges.challenge5.Assignment5",
+        "handlerFunctionName": "login",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.challenges.challenge5.Assignment5.login(java.lang.String,java.lang.String) throws java.lang.Exception",
+        "id": "412316614"
+      },
+      {
+        "method": "POST",
+        "uri": "/PathTraversal/profile-upload",
+        "requestParameter": [
+          {
+            "name": "uploadedFile",
+            "required": true,
+            "className": "interface org.springframework.web.multipart.MultipartFile"
+          },
+          {
+            "name": "fullName",
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.path_traversal.ProfileUpload",
+        "handlerFunctionName": "uploadFileHandler",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.path_traversal.ProfileUpload.uploadFileHandler(org.springframework.web.multipart.MultipartFile,java.lang.String)",
+        "id": "-1812326886"
+      },
+      {
+        "method": "GET",
+        "uri": "/CrossSiteScripting/quiz",
+        "controllerClass": "org.owasp.webgoat.xss.CrossSiteScriptingQuiz",
+        "handlerFunctionName": "getResults",
+        "handlerFunctionSignature": "public boolean[] org.owasp.webgoat.xss.CrossSiteScriptingQuiz.getResults()",
+        "id": "208287339"
+      },
+      {
+        "method": "POST",
+        "uri": "/InsecureDeserialization/task",
+        "requestParameter": [
+          {
+            "name": "token",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.deserialization.InsecureDeserializationTask",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.deserialization.InsecureDeserializationTask.completed(java.lang.String) throws java.io.IOException",
+        "id": "-391147892"
+      },
+      {
+        "method": "POST",
+        "uri": "/SqlInjectionMitigations/attack10b",
+        "requestParameter": [
+          {
+            "name": "editor",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.sql_injection.mitigation.SqlInjectionLesson10b",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.sql_injection.mitigation.SqlInjectionLesson10b.completed(java.lang.String)",
+        "id": "520963224"
+      },
+      {
+        "method": "GET",
+        "uri": "/crypto/hashing/sha256",
+        "controllerClass": "org.owasp.webgoat.crypto.HashingAssignment",
+        "handlerFunctionName": "getSha256",
+        "handlerFunctionSignature": "public java.lang.String org.owasp.webgoat.crypto.HashingAssignment.getSha256(javax.servlet.http.HttpServletRequest) throws java.security.NoSuchAlgorithmException",
+        "id": "521295046"
+      },
+      {
+        "method": "GET",
+        "uri": "/PathTraversal/profile-picture",
+        "controllerClass": "org.owasp.webgoat.path_traversal.ProfileUpload",
+        "handlerFunctionName": "getProfilePicture",
+        "handlerFunctionSignature": "public org.springframework.http.ResponseEntity\u003c?\u003e org.owasp.webgoat.path_traversal.ProfileUpload.getProfilePicture()",
+        "id": "-1857684591"
+      },
+      {
+        "method": "POST",
+        "uri": "/xxe/content-type",
+        "requestParameter": [
+          {
+            "name": "commentStr",
+            "required": true,
+            "className": "class java.lang.String",
+            "type": "REQUEST_BODY",
+            "bodyPojoRepresentation": {
+              "nestedObjects": [
+                {
+                  "typeName": "java.lang.String"
+                }
+              ]
+            }
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.xxe.ContentTypeAssignment",
+        "handlerFunctionName": "createNewUser",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.xxe.ContentTypeAssignment.createNewUser(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String) throws java.lang.Exception",
+        "id": "942579613"
+      },
+      {
+        "method": "POST",
+        "uri": "/crypto/hashing",
+        "requestParameter": [
+          {
+            "name": "answer_pwd1",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "answer_pwd2",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.crypto.HashingAssignment",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.crypto.HashingAssignment.completed(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)",
+        "id": "1566675240"
+      },
+      {
+        "method": "POST",
+        "uri": "/HttpProxies/intercept-request",
+        "requestParameter": [
+          {
+            "name": "changeMe",
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.http_proxies.HttpBasicsInterceptRequest",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.http_proxies.HttpBasicsInterceptRequest.completed(java.lang.Boolean,java.lang.String,javax.servlet.http.HttpServletRequest)",
+        "id": "897650647"
+      },
+      {
+        "method": "GET",
+        "uri": "/HttpProxies/intercept-request",
+        "requestParameter": [
+          {
+            "name": "changeMe",
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.http_proxies.HttpBasicsInterceptRequest",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.http_proxies.HttpBasicsInterceptRequest.completed(java.lang.Boolean,java.lang.String,javax.servlet.http.HttpServletRequest)",
+        "id": "-802336481"
+      },
+      {
+        "method": "POST",
+        "uri": "/BypassRestrictions/FieldRestrictions",
+        "requestParameter": [
+          {
+            "name": "select",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "radio",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "checkbox",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "shortInput",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "readOnlyInput",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.bypass_restrictions.BypassRestrictionsFieldRestrictions",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.bypass_restrictions.BypassRestrictionsFieldRestrictions.completed(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)",
+        "id": "1223590193"
+      },
+      {
+        "method": "GET",
+        "uri": "/xxe/sampledtd",
+        "controllerClass": "org.owasp.webgoat.xxe.SimpleXXE",
+        "handlerFunctionName": "getSampleDTDFile",
+        "handlerFunctionSignature": "public java.lang.String org.owasp.webgoat.xxe.SimpleXXE.getSampleDTDFile()",
+        "id": "221224715"
+      },
+      {
+        "method": "GET",
+        "uri": "/clientSideFiltering/challenge-store/coupons",
+        "controllerClass": "org.owasp.webgoat.client_side_filtering.ShopEndpoint",
+        "handlerFunctionName": "all",
+        "handlerFunctionSignature": "public org.owasp.webgoat.client_side_filtering.ShopEndpoint$CheckoutCodes org.owasp.webgoat.client_side_filtering.ShopEndpoint.all()",
+        "id": "-331895626"
+      },
+      {
+        "method": "GET",
+        "uri": "/WebWolf/landing/password-reset",
+        "controllerClass": "org.owasp.webgoat.webwolf_introduction.LandingAssignment",
+        "handlerFunctionName": "openPasswordReset",
+        "handlerFunctionSignature": "public org.springframework.web.servlet.ModelAndView org.owasp.webgoat.webwolf_introduction.LandingAssignment.openPasswordReset(javax.servlet.http.HttpServletRequest) throws java.net.URISyntaxException",
+        "id": "-2137714357"
+      },
+      {
+        "method": "POST",
+        "uri": "/SqlOnlyInputValidation/attack",
+        "requestParameter": [
+          {
+            "name": "userid_sql_only_input_validation",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.sql_injection.mitigation.SqlOnlyInputValidation",
+        "handlerFunctionName": "attack",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.sql_injection.mitigation.SqlOnlyInputValidation.attack(java.lang.String)",
+        "id": "-868712995"
+      },
+      {
+        "method": "POST",
+        "uri": "/SqlInjection/attack5",
+        "controllerClass": "org.owasp.webgoat.sql_injection.introduction.SqlInjectionLesson5",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.sql_injection.introduction.SqlInjectionLesson5.completed(java.lang.String)",
+        "id": "-1109018439"
+      },
+      {
+        "method": "POST",
+        "uri": "/PasswordReset/SecurityQuestions",
+        "requestParameter": [
+          {
+            "name": "question",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.password_reset.SecurityQuestionAssignment",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.password_reset.SecurityQuestionAssignment.completed(java.lang.String)",
+        "id": "1063149846"
+      },
+      {
+        "method": "GET",
+        "uri": "/service/lessonmenu.mvc",
+        "controllerClass": "org.owasp.webgoat.service.LessonMenuService",
+        "handlerFunctionName": "showLeftNav",
+        "handlerFunctionSignature": "public java.util.List\u003corg.owasp.webgoat.lessons.LessonMenuItem\u003e org.owasp.webgoat.service.LessonMenuService.showLeftNav()",
+        "id": "-1623536039"
+      },
+      {
+        "method": "POST",
+        "uri": "/clientSideFiltering/getItForFree",
+        "requestParameter": [
+          {
+            "name": "checkoutCode",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.client_side_filtering.ClientSideFilteringFreeAssignment",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.client_side_filtering.ClientSideFilteringFreeAssignment.completed(java.lang.String)",
+        "id": "533636868"
+      },
+      {
+        "method": "POST",
+        "uri": "/JWT/votings/{title}",
+        "requestParameter": [
+          {
+            "name": "title",
+            "required": true,
+            "className": "class java.lang.String",
+            "type": "PATH_PARAM"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.jwt.JWTVotesEndpoint",
+        "handlerFunctionName": "vote",
+        "handlerFunctionSignature": "public org.springframework.http.ResponseEntity\u003c?\u003e org.owasp.webgoat.jwt.JWTVotesEndpoint.vote(java.lang.String,java.lang.String)",
+        "id": "-1346123261"
+      },
+      {
+        "method": "POST",
+        "uri": "/PathTraversal/zip-slip",
+        "requestParameter": [
+          {
+            "name": "uploadedFileZipSlip",
+            "required": true,
+            "className": "interface org.springframework.web.multipart.MultipartFile"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.path_traversal.ProfileZipSlip",
+        "handlerFunctionName": "uploadFileHandler",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.path_traversal.ProfileZipSlip.uploadFileHandler(org.springframework.web.multipart.MultipartFile)",
+        "id": "-351755414"
+      },
+      {
+        "method": "GET",
+        "uri": "/service/hint.mvc",
+        "controllerClass": "org.owasp.webgoat.service.HintService",
+        "handlerFunctionName": "getHints",
+        "handlerFunctionSignature": "public java.util.List\u003corg.owasp.webgoat.lessons.Hint\u003e org.owasp.webgoat.service.HintService.getHints()",
+        "id": "-14405809"
+      },
+      {
+        "method": "POST",
+        "uri": "/SqlInjectionMitigations/attack10a",
+        "requestParameter": [
+          {
+            "name": "field1",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "field2",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "field3",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "field4",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "field5",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "field6",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "field7",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.sql_injection.mitigation.SqlInjectionLesson10a",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.sql_injection.mitigation.SqlInjectionLesson10a.completed(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)",
+        "id": "1354116214"
+      },
+      {
+        "method": "GET",
+        "uri": "/xxe/tmpdir",
+        "controllerClass": "org.owasp.webgoat.xxe.SimpleXXE",
+        "handlerFunctionName": "getWebGoatHomeDirectory",
+        "handlerFunctionSignature": "public java.lang.String org.owasp.webgoat.xxe.SimpleXXE.getWebGoatHomeDirectory()",
+        "id": "1174576276"
+      },
+      {
+        "method": "POST",
+        "uri": "/PasswordReset/simple-mail",
+        "requestParameter": [
+          {
+            "name": "email",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "password",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.password_reset.SimpleMailAssignment",
+        "handlerFunctionName": "login",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.password_reset.SimpleMailAssignment.login(java.lang.String,java.lang.String)",
+        "id": "-621906059"
+      },
+      {
+        "method": "POST",
+        "uri": "/csrf/feedback/message",
+        "requestParameter": [
+          {
+            "name": "feedback",
+            "required": true,
+            "className": "class java.lang.String",
+            "type": "REQUEST_BODY",
+            "bodyPojoRepresentation": {
+              "nestedObjects": [
+                {
+                  "typeName": "java.lang.String"
+                }
+              ]
+            }
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.csrf.CSRFFeedback",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.csrf.CSRFFeedback.completed(javax.servlet.http.HttpServletRequest,java.lang.String)",
+        "id": "1927963572"
+      },
+      {
+        "method": "POST",
+        "uri": "/xxe/simple",
+        "requestParameter": [
+          {
+            "name": "commentStr",
+            "required": true,
+            "className": "class java.lang.String",
+            "type": "REQUEST_BODY",
+            "bodyPojoRepresentation": {
+              "nestedObjects": [
+                {
+                  "typeName": "java.lang.String"
+                }
+              ]
+            }
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.xxe.SimpleXXE",
+        "handlerFunctionName": "createNewComment",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.xxe.SimpleXXE.createNewComment(javax.servlet.http.HttpServletRequest,java.lang.String) throws java.lang.Exception",
+        "id": "-1684685691"
+      },
+      {
+        "method": "GET",
+        "uri": "/xxe/applysecurity",
+        "controllerClass": "org.owasp.webgoat.xxe.SimpleXXE",
+        "handlerFunctionName": "setSecurity",
+        "handlerFunctionSignature": "public java.lang.String org.owasp.webgoat.xxe.SimpleXXE.setSecurity(javax.servlet.http.HttpServletRequest)",
+        "id": "-1429961312"
+      },
+      {
+        "method": "GET",
+        "uri": "/JWT/secret/gettoken",
+        "controllerClass": "org.owasp.webgoat.jwt.JWTSecretKeyEndpoint",
+        "handlerFunctionName": "getSecretToken",
+        "handlerFunctionSignature": "public java.lang.String org.owasp.webgoat.jwt.JWTSecretKeyEndpoint.getSecretToken()",
+        "id": "-896536686"
+      },
+      {
+        "method": "GET",
+        "uri": "/service/debug/labels.mvc",
+        "requestParameter": [
+          {
+            "name": "enabled",
+            "required": true,
+            "className": "class java.lang.Boolean"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.service.LabelDebugService",
+        "handlerFunctionName": "setDebuggingStatus",
+        "handlerFunctionSignature": "public org.springframework.http.ResponseEntity\u003cjava.util.Map\u003cjava.lang.String, java.lang.Object\u003e\u003e org.owasp.webgoat.service.LabelDebugService.setDebuggingStatus(java.lang.Boolean) throws java.lang.Exception",
+        "id": "-901669723"
+      },
+      {
+        "method": "POST",
+        "uri": "/CrossSiteScripting/phone-home-xss",
+        "requestParameter": [
+          {
+            "name": "param1",
+            "required": true,
+            "className": "class java.lang.Integer"
+          },
+          {
+            "name": "param2",
+            "required": true,
+            "className": "class java.lang.Integer"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.xss.DOMCrossSiteScripting",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.xss.DOMCrossSiteScripting.completed(java.lang.Integer,java.lang.Integer,javax.servlet.http.HttpServletRequest)",
+        "id": "-955180326"
+      },
+      {
+        "method": "POST",
+        "uri": "/WebWolf/landing",
+        "controllerClass": "org.owasp.webgoat.webwolf_introduction.LandingAssignment",
+        "handlerFunctionName": "click",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.webwolf_introduction.LandingAssignment.click(java.lang.String)",
+        "id": "-595436870"
+      },
+      {
+        "method": "GET",
+        "uri": "/CrossSiteScripting/attack5a",
+        "requestParameter": [
+          {
+            "name": "QTY1",
+            "required": true,
+            "className": "class java.lang.Integer"
+          },
+          {
+            "name": "QTY2",
+            "required": true,
+            "className": "class java.lang.Integer"
+          },
+          {
+            "name": "QTY3",
+            "required": true,
+            "className": "class java.lang.Integer"
+          },
+          {
+            "name": "QTY4",
+            "required": true,
+            "className": "class java.lang.Integer"
+          },
+          {
+            "name": "field1",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "field2",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.xss.CrossSiteScriptingLesson5a",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.xss.CrossSiteScriptingLesson5a.completed(java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)",
+        "id": "63188584"
+      },
+      {
+        "method": "POST",
+        "uri": "/csrf/confirm-flag-1",
+        "controllerClass": "org.owasp.webgoat.csrf.CSRFConfirmFlag1",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.csrf.CSRFConfirmFlag1.completed(java.lang.String)",
+        "id": "-490961783"
+      },
+      {
+        "method": "POST",
+        "uri": "/ChromeDevTools/network",
+        "requestParameter": [
+          {
+            "name": "network_num",
+            "required": true,
+            "className": "class java.lang.String"
+          },
+          {
+            "name": "number",
+            "required": true,
+            "className": "class java.lang.String"
+          }
+        ],
+        "controllerClass": "org.owasp.webgoat.chrome_dev_tools.NetworkLesson",
+        "handlerFunctionName": "completed",
+        "handlerFunctionSignature": "public org.owasp.webgoat.assignments.AttackResult org.owasp.webgoat.chrome_dev_tools.NetworkLesson.completed(java.lang.String,java.lang.String)",
+        "id": "1537168870"
+      }
+    ],
+    "baseUrl": "http://127.0.0.1:8080/WebGoat"
+  }
+}
