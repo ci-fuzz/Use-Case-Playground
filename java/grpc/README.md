@@ -18,8 +18,10 @@ application with ci-protoc of Code Intelligence. Everything else is done by CI F
 Usage: ci-protoc STUB_OUT_PATH [--field_hint=name=value] PROTOC_ARGS...
 ```
 ## Example vulnerable Java-grpc Service
-This project contains a vulnerable grpc server application. Parts of the application are protected by an access token. The source code of the application can be found in:
-* [vulnerable_grpc_server.java](https://github.com/ci-fuzz/CI-Fuzz-Playground/edit/main/java/grpc/vulnerable_grpc_server.java)
+This project contains a vulnerable grpc server application. Parts of the application are protected by an access token.
+
+The source code of the application can be found in:
+* [VulnerableGrpcServer.java](https://github.com/ci-fuzz/CI-Fuzz-Playground/edit/main/java/grpc/src/com/example/VulnerableGrpcServer.java)
 
 There are two protobuf description files defined for the API of the application:
 * [greeter_messages.proto](https://github.com/ci-fuzz/CI-Fuzz-Playground/edit/main/java/grpc/proto/greeter_messages.proto)
