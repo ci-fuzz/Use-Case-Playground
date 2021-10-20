@@ -5,8 +5,9 @@
 ## setting, lines that start with "#" are settings that can be enabled
 ## by removing the "#".
 
-description: >
-  This project contains a collection of fuzz tests that show some of the features of CI Fuzz.
+## Project description to show in the UI.
+description: "This project contains a collection of fuzz tests that show some of the features of CI Fuzz.
+"
 
 ## The fuzz targets are built and run in Docker containers. This setting
 ## allows you to specify the Docker image that should be used for
@@ -17,11 +18,11 @@ description: >
 ## directories (/lib, /bin/, /usr, ...) from the host system are
 ## automatically mounted into the container, effectively creating a
 ## build environment from the host.
-build_container: cifuzz/ci-ubuntu
+build_container: "cifuzz/ci-ubuntu"
 
 ## The name of the container image used for running the fuzz tests. If
 ## unspecified, the image of the build container is used.
-run_container: cifuzz/ci-ubuntu
+run_container: "cifuzz/ci-ubuntu"
 
 ## A list of paths which should be mounted from the host into the
 ## build and run containers. The format is SOURCE-DIR:DEST-DIR, where
@@ -40,10 +41,9 @@ build_script: ".code-intelligence/build.sh"
 
 ## Paths to the fuzz targets to execute.
 fuzz_tests:
-  - "c_cpp/api_fuzzing/plain/fuzz_targets/API Fuzz Test.cpp"
-  - "c_cpp/api_fuzzing/chain/fuzz_targets/Chain Fuzz Test.cpp"
-  - "c_cpp/api_fuzzing/mocking/fuzz_targets/API Fuzz Test With Mocks.cpp"
-  - "java/api_fuzzing/JavaAPIFuzzer.java"
+  - c_cpp/api_fuzzing/plain/fuzz_targets/API Fuzz Test.cpp
+  - c_cpp/api_fuzzing/chain/fuzz_targets/Chain Fuzz Test.cpp
+  - c_cpp/api_fuzzing/mocking/fuzz_targets/API Fuzz Test With Mocks.cpp
 
 ## Paths to web app fuzz target configs.
 web_app_target_configs:

@@ -7,8 +7,10 @@
 #define KEY_LENGTH 64
 #define HMAC_LENGTH 64
 
+//The software that we want to test is defined in this namespace
 namespace target_software {
 
+  //Declarations
   typedef struct nonce {
     uint8_t nonce[NONCE_LENGTH];
     int time_of_creation;
@@ -42,6 +44,8 @@ namespace target_software {
     nonce_and_key_set
   };
 
+
+  //Definition of global variables
   static enum state current_state = uninitialized;
   static key current_key = {0};
   static nonce * current_nonce;
@@ -108,23 +112,30 @@ namespace target_software {
 }
 
 extern "C" int FUZZ(const uint8_t *Data, size_t Size) {
-  
+  //We make use of the FuzzedDataProvider to consume the fuzzing data in different formats
   FuzzedDataProvider fuzz_data(Data, Size);
   
+  //Call first function
   target_software::init();
 
+  //Prepare parameter for second function
   target_software::key k;
   fuzz_data.ConsumeData(&k, sizeof(k));
+  //Call second function
   target_software::set_key(k);
   
+  //Prepare parameter for third function
   target_software::nonce n;
   fuzz_data.ConsumeData(&n, sizeof(n));
+  //Call third function
   target_software::set_nonce(n);
   
+  //Prepare parameter for fourth function
+  //The hmac parameter is only an output parameter so we do not need to fill it with fuzzing data
   target_software::hmac h;
   std::vector<uint8_t> message = fuzz_data.ConsumeBytes<uint8_t>(fuzz_data.ConsumeIntegral<uint8_t>());
 
-  //Execute API function with prepared parameters
+  //Execute fourth function with prepared parameters
   target_software::calculate_hmac(message.data(), message.size(), &h);
 
   return 0;
