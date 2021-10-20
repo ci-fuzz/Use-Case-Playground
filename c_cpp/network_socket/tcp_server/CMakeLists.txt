@@ -1,0 +1,1 @@
+add_executable(simple_note_server simple_note_server.c)
