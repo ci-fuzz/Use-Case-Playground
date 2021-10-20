@@ -5,6 +5,9 @@
 ## setting, lines that start with "#" are settings that can be enabled
 ## by removing the "#".
 
+description: >
+  This project contains a collection of fuzz tests that show some of the features of CI Fuzz.
+
 ## The fuzz targets are built and run in Docker containers. This setting
 ## allows you to specify the Docker image that should be used for
 ## building this project. It must contain all the dependencies required
