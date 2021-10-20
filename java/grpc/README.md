@@ -31,5 +31,5 @@ To compile the Protobuf description files the following command can be used:
 ```
 ci-protoc libproto_stub.so -Iproto proto/greeter_service.proto proto/greeter_messages.proto --field_hint=authentication.access_token=let_me_in  --field_hint=authentication.access_token=backdoor
 ```
-In addition to the fuzzing of unauthenticated parts of the application, we set so-called field hints **--field_hint** for the access_token to let the fuzzer also explore authenticated parts of the application.
+In addition to the fuzzing of unauthorized parts of the application, we set so-called field hints **--field_hint** for the access_token to let the fuzzer also explore authorized parts of the application.
 
