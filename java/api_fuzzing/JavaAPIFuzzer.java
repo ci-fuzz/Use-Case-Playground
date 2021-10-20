@@ -27,10 +27,7 @@ public class JavaAPIFuzzer {
 
   public static void fuzzerTestOneInput(FuzzedDataProvider data) {
     String input = data.consumeRemainingAsString();
-    // Without the hook in ExampleFuzzerHooks.java, the value of random would change on every
-    // invocation, making it almost impossible to guess for the fuzzer.
-    long random = new SecureRandom().nextLong();
-    if (input.startsWith("magicstring" + random) && input.length() > 30
+    if (input.startsWith("magicstring") && input.length() > 30
         && input.charAt(25) == 'C') {
       mustNeverBeCalled();
     }

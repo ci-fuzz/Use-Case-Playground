@@ -13,12 +13,12 @@ type: "c++"
 
 ## Additional arguments to pass to the compiler during build.
 compiler_extra_args:
-  - "build/c_cpp/embedded_library/libexample-embedded-library.a"
-  - "c_cpp/embedded_library/mocking/mocklib.cpp"
-  - "-Ic_cpp/embedded_library/modules/crypto_module/src"
-  - "-Ic_cpp/embedded_library/modules/time_module/src"
-  - "-Ic_cpp/embedded_library/modules/key_management_module/src"
-  - "-Ic_cpp/embedded_library/modules/GPS_module/src"
+  - "build/c_cpp/api_fuzzing/mocking/libexample-embedded-library.a"
+  - "c_cpp/api_fuzzing/mocking/mocking/mocklib.cpp"
+  - "-Ic_cpp/api_fuzzing/mocking/modules/crypto_module/src"
+  - "-Ic_cpp/api_fuzzing/mocking/modules/time_module/src"
+  - "-Ic_cpp/api_fuzzing/mocking/modules/key_management_module/src"
+  - "-Ic_cpp/api_fuzzing/mocking/modules/GPS_module/src"
 
 ## Additional arguments to pass to the fuzz target when it is executed.
 ## Note that any relative paths are resolved relative to the root of the

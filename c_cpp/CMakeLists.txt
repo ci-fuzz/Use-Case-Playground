@@ -1,4 +1,3 @@
-add_subdirectory(library)
-add_subdirectory(embedded_library)
-add_subdirectory(tcp_server)
-add_subdirectory(udp_server)
+add_subdirectory(api_fuzzing/mocking)
+add_subdirectory(network_socket/tcp_server)
+add_subdirectory(network_socket/udp_server)
