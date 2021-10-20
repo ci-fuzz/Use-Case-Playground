@@ -1,3 +1,3 @@
-add_subdirectory(API_Fuzzing/mocking)
+add_subdirectory(api_fuzzing/mocking)
 add_subdirectory(network_socket/tcp_server)
 add_subdirectory(network_socket/udp_server)
