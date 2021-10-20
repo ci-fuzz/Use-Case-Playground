@@ -1,0 +1,19 @@
+## The fuzz target type. If unspecified, the type is derived from the
+## extension of the fuzz target source file.
+type: "java web app"
+
+## Additional arguments to pass to the fuzz target when it is executed.
+## Note that any relative paths are resolved relative to the root of the
+## project directory.
+run_extra_args:
+  - "--proto_stub_path=java/grpc/libproto_stub.so"
+
+## List of web services fuzzed as part of this fuzz target.
+web_services:
+  - "grpc-test"
+
+## Base URL of the application under test.
+base_url: "127.0.0.1:12345"
+
+## Protocol used to communicate with the software under test. Valid values are "http" and "grpc".
+protocol: grpc

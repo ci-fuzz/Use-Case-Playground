@@ -1,0 +1,4 @@
+{
+  "name": "grpc-test",
+  "javaCommand": "bazel-bin/pkg/web_app/tests/integration/grpc/testdata/greeter_service/GreeterServer_deploy.jar"
+}

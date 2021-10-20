@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package proto;
+
+import "greeter_messages.proto";
+
+service Greeter {
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+  rpc SayBye (ByeRequest) returns (ByeReply) {}
+}
