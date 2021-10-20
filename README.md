@@ -11,11 +11,11 @@ Fuzzing is a dynamic code analysis technique that supplies pseudo-random inputs 
 * [C and C++](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/c_cpp)
   * [API Fuzzing (Plain, Chain, Mocking)](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/c_cpp)
   * [Network Socket Fuzzing (Plain, Chain)](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/c_cpp/network_socket)
-  * [Grammar Fuzzing (JSON, XML, Custom)](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/c_cpp)
+  <!--- * [Grammar Fuzzing (JSON, XML, Custom)](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/c_cpp)
   * [Custom Sanitizer/Custom Vulnerabilities](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/c_cpp)
-  * [Unit Test Runner?](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/c_cpp)
+  * [Unit Test Runner?](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/c_cpp) -->
 * [Java](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/java)
   * [API Fuzzing (Plain, Chain)](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/java/api_fuzzing)
   * [Web App Fuzzing (REST, Web)](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/java/webapp)
   * [gRPC](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/java/grpc)
-  * [Custom Sanitizer/Custom Vulnerabilities](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/java)
+  <!---* [Custom Sanitizer/Custom Vulnerabilities](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/java) -->
