@@ -27,7 +27,7 @@ There are two protobuf description files defined for the API of the application:
 * [greeter_messages.proto](https://github.com/ci-fuzz/CI-Fuzz-Playground/edit/main/java/grpc/proto/greeter_messages.proto)
 * [greeter_service.proto](https://github.com/ci-fuzz/CI-Fuzz-Playground/edit/main/java/grpc/proto/greeter_service.proto) 
 
-To compile the Protobuf description files the following parameter can be used:
+To compile the Protobuf description files the following command can be used:
 ```
 ci-protoc libproto_stub.so -Iproto proto/greeter_service.proto proto/greeter_messages.proto --field_hint=authentication.access_token=let_me_in  --field_hint=authentication.access_token=backdoor
 ```
