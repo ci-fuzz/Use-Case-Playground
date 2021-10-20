@@ -1,5 +1,5 @@
 ## Configuration of a CI Fuzz test
-## Generated on 2021-10-19 with CI Fuzz 2.24.0
+## Generated on 2021-08-20 with CI Fuzz 2.23.0
 ##
 ## Lines that start with "##" are explanations for the following
 ## setting, lines that start with "#" are settings that can be enabled
@@ -12,12 +12,7 @@
 type: "c++"
 
 ## Additional arguments to pass to the compiler during build.
-compiler_extra_args:
-  - "build/c_cpp/library/libexample-library.a"
-  - "-Ic_cpp/library/modules/crypto_module/src"
-  - "-Ic_cpp/library/modules/time_module/src"
-  - "-Ic_cpp/library/modules/key_management_module/src"
-  - "-Ic_cpp/library/modules/GPS_module/src"
+#compiler_extra_args:
 
 ## Additional arguments to pass to the fuzz target when it is executed.
 ## Note that any relative paths are resolved relative to the root of the
@@ -30,7 +25,7 @@ compiler_extra_args:
 #  libfuzzer:
 #    - -rss_limit_mb=4096
 
-## Environment variables to set when executing the target.
+## Environment variables to set when executing the target
 #environment:
 #  - ASAN_OPTIONS=detect_leaks=0
 
@@ -44,6 +39,6 @@ compiler_extra_args:
 #instrumentation_filters:
 #  - com.my_company
 
-## List of jar dependencies needed by the fuzz target.
+## List of jar dependencies needed by the fuzz target
 #jars:
 #  - target/library_under_test-1.0.jar
