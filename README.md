@@ -8,11 +8,11 @@ Fuzzing is a dynamic code analysis technique that supplies pseudo-random inputs 
 
 ## How does this playground work?
 
-1.	Take a look at the fuzzing playground on app.code-intelligence.com, look at the findings and the projects that trigger them. We have examples for both c and c++ (API and network socket) as well as Java (API and Web)
+1.	Take a look at the fuzzing playground on [app.code-intelligence.com](https://app.code-intelligence.com), look at the findings and the projects that trigger them. We have examples for both c and c++ (API and network socket) as well as Java (API and Web).
 
-2.	Request early access to dive into the github.com/ci-fuzz/CI-Fuzz-Playground to understand the code that causes the findings and the fuzz tests that are used to catch them
+2.	Request early access to dive into this [Playground](github.com/ci-fuzz/CI-Fuzz-Playground) to understand the code that causes the findings and the fuzz tests that are used to catch them.
 
-3.	Check out our resources and further reading to understand more about fuzzing or to take the next steps and fuzz your code – either with github.com/CodeIntelligenceTesting/jazzer or with a full-blown CI Fuzz version
+3.	Check out our resources and further reading to understand more about fuzzing or to take the next steps and fuzz your code – either with [Jazzer](github.com/CodeIntelligenceTesting/jazzer) or with a full-blown CI Fuzz version.
 
 
 ## Use Cases:
