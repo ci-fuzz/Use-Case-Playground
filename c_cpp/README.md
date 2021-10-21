@@ -4,5 +4,5 @@ In case of C/C++ applications, CI Fuzz detects and reports memory corruptions, w
 At CI Fuzz we distinguish between:
 
 * [API Fuzzing](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/c_cpp/api_fuzzing) that targets application testing on function-level
-* [Network Socket Fuzzing](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/c_cpp/network_socket) that targets application testing on protocol-level
+* [Network Socket Fuzzing](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/c_cpp/network_socket/tcp_server) that targets application testing on protocol-level
 
