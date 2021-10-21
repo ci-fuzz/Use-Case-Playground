@@ -1,4 +1,4 @@
-# Java
+# Java Fuzzing
 Even in a memory-safe language such as Java, potentially harmful bugs like uncaught exceptions or 
 denial of service problems are an issue. Writing a parser is particularly hard, because the developer 
 needs to think about all edge cases and invalid inputs in addition to handling correct inputs.
