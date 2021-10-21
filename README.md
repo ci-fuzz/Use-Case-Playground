@@ -1,6 +1,6 @@
 # CI-Fuzz-Playground
 
-This project is a fuzzing playground which aims to show different use cases of fuzzing.
+Welcome to the CI-Fuzz Playground! This project has been created by Code Intelligence to allow you to learn and explore fuzzing for various use cases and technologies.
 
 ## What is fuzzing (in a nutshell)?
 
