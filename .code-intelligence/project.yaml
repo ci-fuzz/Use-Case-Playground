@@ -1,13 +1,9 @@
 ## Configuration for a CI Fuzz project
-## Generated on 2021-10-20 with CI Fuzz 2.24.0
+## Generated on 2021-10-21 with CI Fuzz 2.24.0
 ##
 ## Lines that start with "##" are explanations for the following
 ## setting, lines that start with "#" are settings that can be enabled
 ## by removing the "#".
-
-## Project description to show in the UI.
-description: "This project contains a collection of fuzz tests that show some of the features of CI Fuzz.
-"
 
 ## The fuzz targets are built and run in Docker containers. This setting
 ## allows you to specify the Docker image that should be used for
@@ -53,8 +49,10 @@ web_app_target_configs:
 ## targets. Note that the Undefined Behavior Sanitizer (UBSan) is
 ## always used, regardless of this setting. By default, only
 ## Address Sanitizer (and Undefined Behavior Sanitizer) is used.
-sanitizers:
-  - address
+#sanitizers:
+#  - address
+#  - memory
+#  - thread
 
 ## The fuzzing engines to use for the fuzz tests. By default, only
 ## libfuzzer is used. Only valid for C/C++ targets.
@@ -65,12 +63,12 @@ sanitizers:
 
 ## The run time after which the fuzz tests are cancelled and
 ## considered as having passed. The default is 30 minutes.
-max_runtime: "30m0s"
+#max_runtime: 2h
 
 ## The number of parallel executions per fuzz test. The default is 1,
 ## which means for each combination of fuzzing engine and sanitizer,
 ## each fuzz target is executed once.
-parallel_executions: 1
+#parallel_executions: 2
 
 ## By default, fuzz targets are seeded with an initial input corpus,
 ## which consists of files of various data formats. This often improves
