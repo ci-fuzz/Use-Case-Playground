@@ -21,4 +21,4 @@ Fuzzing is a dynamic code analysis technique that supplies pseudo-random inputs 
   <!---* [Custom Sanitizer/Custom Vulnerabilities](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/java) -->
 
 ## Other Resources:
-[Code Intelligence Documentation](https://help.code-intelligence.com/)
+[Code Intelligence Knowledge Base](https://help.code-intelligence.com/)
