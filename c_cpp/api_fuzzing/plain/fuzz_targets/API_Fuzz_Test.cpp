@@ -16,23 +16,26 @@ namespace target_software {
   };
 
     return_status calculate_hmac(const uint8_t * const message, size_t len, hmac * h) {
-        if (len > 4) {
-            if (message[1] == 42) {
-                return hmac_successfully_calculated; 
-            }
-            if (message[0] == 1) {
-                if (message[1] == 2) {            
-                    if (message[2] == 3) {            
-                        if (message[3] == 4) {
-                            int x[3];
-                            int y = 3;
-                            h->hmac[0] = x[y];
+        if (len > 6) {
+            if (message[0] == 'C') {
+                if (message[1] == 'I') {            
+                    if (message[2] == '-') {            
+                        if (message[3] == 'F') {        
+                            if (message[4] == 'U') {        
+                                if (message[5] == 'Z') {        
+                                    if (message[6] == 'Z') {
+                                        int x[3];
+                                        h->hmac[0] = x[3];
+                                        return error_during_hmac_calculation;
+                                    }
+                                }
+                            }
                         }   
                     }   
                 }   
             }
         }
-        return error_during_hmac_calculation;
+        return hmac_successfully_calculated; 
     }
 }
 
