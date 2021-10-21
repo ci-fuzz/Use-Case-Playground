@@ -10,7 +10,7 @@ Fuzzing is a dynamic code analysis technique that supplies pseudo-random inputs 
 
 * [C and C++](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/c_cpp)
   * [API Fuzzing (Plain, Chain, Mocking)](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/c_cpp/api_fuzzing)
-  * [Network Socket Fuzzing (Plain, Chain)](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/c_cpp/network_socket)
+  * [Network Socket Fuzzing (Plain, Chain)](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/c_cpp/network_socket/tcp_server)
   <!--- * [Grammar Fuzzing (JSON, XML, Custom)](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/c_cpp)
   * [Custom Sanitizer/Custom Vulnerabilities](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/c_cpp)
   * [Unit Test Runner?](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/c_cpp) -->
