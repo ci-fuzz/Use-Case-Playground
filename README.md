@@ -1,6 +1,6 @@
 # CI-Fuzz-Playground
 
-This project is a fuzzing playground which aims to show different use cases of fuzzing.
+Welcome to the CI-Fuzz Playground! This project has been created by Code Intelligence to allow you to learn and explore fuzzing for various use cases and technologies.
 
 ## What is fuzzing (in a nutshell)?
 
@@ -10,7 +10,7 @@ Fuzzing is a dynamic code analysis technique that supplies pseudo-random inputs 
 
 * [C and C++](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/c_cpp)
   * [API Fuzzing (Plain, Chain, Mocking)](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/c_cpp/api_fuzzing)
-  * [Network Socket Fuzzing (Plain, Chain)](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/c_cpp/network_socket)
+  * [Network Socket Fuzzing (Plain, Chain)](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/c_cpp/network_socket/tcp_server)
   <!--- * [Grammar Fuzzing (JSON, XML, Custom)](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/c_cpp)
   * [Custom Sanitizer/Custom Vulnerabilities](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/c_cpp)
   * [Unit Test Runner?](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/c_cpp) -->
@@ -19,3 +19,6 @@ Fuzzing is a dynamic code analysis technique that supplies pseudo-random inputs 
   * [Web App Fuzzing (REST, Web)](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/java/webapp)
   * [gRPC](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/java/grpc)
   <!---* [Custom Sanitizer/Custom Vulnerabilities](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/java) -->
+
+## Other Resources:
+[Code Intelligence Knowledge Base](https://help.code-intelligence.com/)
