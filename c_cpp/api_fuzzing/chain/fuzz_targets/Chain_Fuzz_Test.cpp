@@ -97,11 +97,23 @@ namespace target_software {
 
   return_status calculate_hmac(const uint8_t * const message, size_t len, hmac * h) {
     if (current_state == nonce_and_key_set) {
-      if (len > 0) {
-        if (message[1] == 42) {
-          //Delete nonce to make sure it is only used once
-          free(current_nonce);
-          return hmac_successfully_calculated;
+      if (len > 6) {
+        if (message[0] == 'C') {
+          if (message[1] == 'I') {            
+            if (message[2] == '-') {            
+              if (message[3] == 'F') {        
+                if (message[4] == 'U') {        
+                  if (message[5] == 'Z') {        
+                    if (message[6] == 'Z') {
+                      //Delete nonce to make sure it is only used once
+                      free(current_nonce);
+                      return hmac_successfully_calculated;
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
       current_state = initialized;
