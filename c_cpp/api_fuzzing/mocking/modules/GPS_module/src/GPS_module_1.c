@@ -36,7 +36,7 @@ enum GPS_return_status get_current_position(GPS_position * position) {
     uint8_t position_as_bytes[12];
     uint8_t hmac_as_bytes[HMAC_LENGTH];
     if (GPS_driver_obtain_current_position(position_as_bytes, hmac_as_bytes) == 0) {
-        if (crypto_verify_hmac(position_as_bytes, 16, hmac_as_bytes) == valid_hmac) {
+        if (crypto_verify_hmac(position_as_bytes, 12, hmac_as_bytes) == valid_hmac) {
             GPS_position pos = {
                 position_as_bytes[0] << 1 + position_as_bytes[1],
                 position_as_bytes[2] << 1 + position_as_bytes[3],

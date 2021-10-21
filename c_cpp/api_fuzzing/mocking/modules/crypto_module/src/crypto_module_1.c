@@ -36,7 +36,7 @@ enum crypto_return_status crypto_set_key(crypto_key key) {
 }
 
 enum crypto_return_status crypto_set_nonce(crypto_nonce nonce) {
-    if(crypto_verify_nonce(&nonce) == valid_nonce_provided) {
+    if(current_state == initialized && crypto_verify_nonce(&nonce) == valid_nonce_provided) {
         for (int i = 0; i < NONCE_LENGTH; i++) {
             current_nonce->nonce[i] = nonce.nonce[i];
         }
@@ -55,10 +55,10 @@ enum crypto_return_status crypto_set_nonce(crypto_nonce nonce) {
 enum crypto_return_status crypto_calculate_hmac(const uint8_t * message, int len, crypto_hmac * hmac) {
     if (current_state == nonce_and_key_set) {
         if (current_nonce != 0) {
-            if (third_party_library_calc_hmac(message, len, &(current_key.key), current_nonce->nonce, hmac->hmac) == 0) {
+            if (third_party_library_calc_hmac(message, len, &(current_key.key), current_nonce->nonce, hmac->hmac) == 42) {
                 //Delete nonce to make sure it is only used once
                 free(current_nonce);
-                //current_nonce = 0;
+                // current_nonce = 0;
                 return hmac_successfully_calculated;
             }
         }
