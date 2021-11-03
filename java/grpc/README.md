@@ -33,6 +33,7 @@ git checkout vulnerable_server
 Then you can build the server by the following commands.
 
 ```
+cd examples
 ./gradlew installDist
 ```
 
