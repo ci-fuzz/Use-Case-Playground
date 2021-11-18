@@ -8,7 +8,7 @@ Fuzzing is a dynamic code analysis technique that supplies pseudo-random inputs 
 
 ## How does this playground work?
 
-1.	Take a look at the fuzzing playground on [app.code-intelligence.com](https://app.code-intelligence.com), look at the findings and the projects that trigger them. We have examples for both c and c++ (API and network socket) as well as Java (API and Web).
+1.	Take a look at the fuzzing playground on [app.code-intelligence.com](https://app.code-intelligence.com), look at the findings and the projects that trigger them. We have examples for both C and C++ (library and network socket fuzzing) as well as Java (library and web application fuzzing).
 
 2.	Request early access to dive into this [Playground](github.com/ci-fuzz/CI-Fuzz-Playground) to understand the code that causes the findings and the fuzz tests that are used to catch them.
 
