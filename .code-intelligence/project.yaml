@@ -5,7 +5,7 @@
 ## setting, lines that start with "#" are settings that can be enabled
 ## by removing the "#".
 
-description: This project has been created by Code Intelligence to allow you to learn and explore fuzzing for various use cases and technologies.
+descryption: Explore for yourself how fuzzing can be used in different programming languages and applications.
 
 ## The fuzz targets are built and run in Docker containers. This setting
 ## allows you to specify the Docker image that should be used for
