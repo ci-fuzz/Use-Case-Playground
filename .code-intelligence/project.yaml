@@ -39,12 +39,14 @@ build_script: ".code-intelligence/build.sh"
 
 ## Paths to the fuzz targets to execute.
 fuzz_tests:
+  - c_cpp/api_fuzzing/plain/fuzz_targets/C/C++_Use_Cases.cpp
   - c_cpp/api_fuzzing/plain/fuzz_targets/API_Fuzz_Test.cpp
   - c_cpp/api_fuzzing/chain/fuzz_targets/Chain_Fuzz_Test.cpp
   - c_cpp/api_fuzzing/mocking/fuzz_targets/API_Fuzz_Test_With_Mocks.cpp
 
 ## Paths to web app fuzz target configs.
 web_app_target_configs:
+  - .code-intelligence/fuzz_targets/Java_Use_Cases.yaml
   - .code-intelligence/fuzz_targets/fuzz-java-grpc.yaml
 
 ## The sanitizers to use for the fuzz tests. Only applies to C/C++
