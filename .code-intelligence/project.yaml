@@ -39,7 +39,7 @@ build_script: ".code-intelligence/build.sh"
 
 ## Paths to the fuzz targets to execute.
 fuzz_tests:
-  - c_cpp/api_fuzzing/plain/fuzz_targets/C/C++_Use_Cases.cpp
+  - c_cpp/api_fuzzing/plain/fuzz_targets/C++_Use_Case.cpp
   - c_cpp/api_fuzzing/plain/fuzz_targets/API_Fuzz_Test.cpp
   - c_cpp/api_fuzzing/chain/fuzz_targets/Chain_Fuzz_Test.cpp
   - c_cpp/api_fuzzing/mocking/fuzz_targets/API_Fuzz_Test_With_Mocks.cpp
