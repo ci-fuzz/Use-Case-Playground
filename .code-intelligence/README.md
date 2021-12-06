@@ -6,7 +6,7 @@ Welcome to the Use Case Playground! This project allows you to learn and explore
 
 Fuzzing is a dynamic code analysis technique that supplies pseudo-random inputs to a software-under-test (SUT), derives new inputs from the behaviour of the program (i.e. how inputs are processed), and monitors the SUT for bugs.
 
-Check out our <a href="https://help.code-intelligence.com/getting-started" target="_blank">resources</a> and [further reading](https://www.code-intelligence.com/blog/fuzzing-101-the-basics) to understand more about fuzzing or to take the next steps and fuzz your code – either with [Jazzer](https://github.com/CodeIntelligenceTesting/jazzer) or with a full-blown CI Fuzz version.
+Check out our [resources](https://help.code-intelligence.com/getting-started) and [further reading](https://www.code-intelligence.com/blog/fuzzing-101-the-basics) to understand more about fuzzing or to take the next steps and fuzz your code – either with [Jazzer](https://github.com/CodeIntelligenceTesting/jazzer) or with a full-blown CI Fuzz version.
 
 ## Where can you use fuzzing?
 
