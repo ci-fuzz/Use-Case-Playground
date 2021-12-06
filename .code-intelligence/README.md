@@ -1,5 +1,8 @@
 
 ![CI Logo](https://www.code-intelligence.com/hubfs/raw_assets/public/Code_Intelligence_June2020/images/figurative_mark.svg "TITLE")
+
+
+[![Video Tutorial](https://i3.ytimg.com/vi/gXC_p3AuuGI/maxresdefault.jpg)](https://www.youtube.com/watch?v=gXC_p3AuuGI "Video Tutorial")
 # Use Case Playground
 
 Welcome to the Use Case Playground! This project allows you to learn and explore fuzzing for various use cases and technologies.
