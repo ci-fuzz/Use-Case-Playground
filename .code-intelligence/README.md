@@ -1,5 +1,3 @@
-![Flowchart](https://raw.githubusercontent.com/ci-fuzz/Use-Case-Playground/main/.code-intelligence/Entwurf2.5.jpg "Flowchart")
-
 # Use Case Playground
 
 Welcome to the Use Case Playground! This project allows you to learn and explore fuzzing for various use cases and technologies.
