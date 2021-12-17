@@ -1,4 +1,4 @@
-![Flowchart](https://github.com/ci-fuzz/Use-Case-Playground/blob/main/.code-intelligence/Entwurf.png "Flowchart")
+![Flowchart](https://github.com/ci-fuzz/Use-Case-Playground/blob/main/.code-intelligence/Entwurf.jpg "Flowchart")
 
 # Use Case Playground
 
