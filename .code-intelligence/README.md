@@ -1,7 +1,3 @@
-![Flowchart](https://drive.google.com/file/d/1GWNvM4I1tqIAuzC1A5-KatCutdS2-lt8/view?usp=sharing "Explore fuzzing right here")
-
-![Flowchart](https://drive.google.com/file/d/1GWNvM4I1tqIAuzC1A5-KatCutdS2-lt8/view "Explore fuzzing right here")
-
 # Use Case Playground
 
 Welcome to the Use Case Playground! This project allows you to learn and explore fuzzing for various use cases and technologies.
