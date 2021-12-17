@@ -1,3 +1,5 @@
+![Flowchart](Entwurf.png)
+
 # Use Case Playground
 
 Welcome to the Use Case Playground! This project allows you to learn and explore fuzzing for various use cases and technologies.
