@@ -28,6 +28,9 @@ Fuzzing is a dynamic code analysis technique that supplies pseudo-random inputs 
   * [Web App Fuzzing (REST, Web)](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/java/webapp)
   * [gRPC](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/java/grpc)
   <!---* [Custom Sanitizer/Custom Vulnerabilities](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/java) -->
+* [Go](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/go)
+  * [API Fuzzing (Plain)](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/go/api_fuzzing)
+  <!---* [Custom Sanitizer/Custom Vulnerabilities](https://github.com/ci-fuzz/CI-Fuzz-Playground/tree/main/go) -->
 
 ## Other Resources:
 [Code Intelligence Knowledge Base](https://help.code-intelligence.com/)
