@@ -1,4 +1,4 @@
-package api_fuzzing
+package playground
 
 import "encoding/binary"
 

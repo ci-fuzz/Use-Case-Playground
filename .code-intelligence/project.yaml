@@ -46,7 +46,7 @@ fuzz_tests:
 ## Go packages containing fuzz targets. A fuzzer is created
 ## for each function starting with "Fuzz"
 go_fuzz_packages:
-  - api_fuzzing
+  - playground/go/api_fuzzing
 
 ## Paths to web app fuzz target configs.
 web_app_target_configs:
