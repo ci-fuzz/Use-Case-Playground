@@ -1,0 +1,4 @@
+type: "go"
+
+compiler_extra_args:
+  - -include playground*
