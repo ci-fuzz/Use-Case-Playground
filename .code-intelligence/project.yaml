@@ -28,8 +28,8 @@ run_container: "cifuzz/ci-ubuntu"
 ## in the container.
 ## Environment variables in the paths are expanded from the host's
 ## environment.
-#mounts:
-#  - $HOME/build:/build
+mounts:
+  - "$HOME/go:$HOME/go"
 
 ## The relative path to a script that builds the project. This script
 ## be will automatically copied into the build container and executed to
@@ -42,6 +42,11 @@ fuzz_tests:
   - c_cpp/api_fuzzing/plain/fuzz_targets/API_Fuzz_Test.cpp
   - c_cpp/api_fuzzing/chain/fuzz_targets/Chain_Fuzz_Test.cpp
   - c_cpp/api_fuzzing/mocking/fuzz_targets/API_Fuzz_Test_With_Mocks.cpp
+
+## Go packages containing fuzz targets. A fuzzer is created
+## for each function starting with "Fuzz"
+go_fuzz_packages:
+  - playground/go/api_fuzzing
 
 ## Paths to web app fuzz target configs.
 web_app_target_configs:
