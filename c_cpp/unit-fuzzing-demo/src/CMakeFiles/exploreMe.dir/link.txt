@@ -1,0 +1,2 @@
+/usr/bin/ar qc libexploreMe.a  CMakeFiles/exploreMe.dir/explore_me.cpp.o
+/usr/bin/ranlib libexploreMe.a
